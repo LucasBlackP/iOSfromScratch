@@ -25,7 +25,8 @@ class MealTableViewController: UIViewController, UITableViewDelegate, UITableVie
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        config()
+        //Configure Views - Interactor
+        configVI()
     }
     
     //UITableViewDataSource
@@ -74,7 +75,7 @@ extension MealTableViewController{
         let nibCell = UINib.init(nibName: "MealCell", bundle: nil)
         tableView.register(nibCell, forCellReuseIdentifier: "MealCell")
     }
-    func config(){
+    func configVI(){
         self.listViewDelegate = interactor
         self.interactor.tableViewControllerDelegate = self
         self.tableDataSource = self.listViewDelegate?.initData()

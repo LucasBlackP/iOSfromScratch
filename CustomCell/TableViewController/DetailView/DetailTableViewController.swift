@@ -25,7 +25,8 @@ class DetailTableViewController: UIViewController,UITableViewDelegate,UITableVie
     override func viewDidLoad() {
         // Do any additional setup after loading the view.
         super.viewDidLoad()
-        config()
+        //Configure Views - Interactor
+        configVI()
         
         
     }
@@ -77,7 +78,7 @@ extension DetailTableViewController: DetailTableViewControllerProtocol{
 }
 
 extension DetailTableViewController{
-    func config(){
+    func configVI(){
         detailInteractorDelegate = interactor
         interactor.detailTableDelegate = self
         tableData = self.detailInteractorDelegate?.initData(meal: meal!)
