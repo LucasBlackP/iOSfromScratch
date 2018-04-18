@@ -8,42 +8,18 @@
 
 import UIKit
 
-class ListViewInteractor: UIViewController,UITableViewDataSource,UITableViewDelegate{
+protocol ListViewInteractorProtocol: class{
+    func initData()->MenuData?
+}
+
+class ListViewInteractor{
     
     //MARK: Properties
-    var tableDataSource:MenuData?
-    weak var delegate:TableDelegate?
-    //UITableViewDataSource
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return tableDataSource!.listMeal.count
-    }
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return tableDataSource!.listMeal[section].values.first!.count
-    }
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let item = tableDataSource!.listMeal[indexPath.section].values.first![indexPath.row]
-        let cell = tableView.dequeueReusableCell(withIdentifier: type(of: item).reuseId)!
-        item.configure(cell: cell)
-        return cell
-    }
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return tableDataSource!.listMeal[section].keys.first!
-    }
-    //UITableViewDelegate
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let item = tableDataSource!.listMeal[indexPath.section].values.first![indexPath.row]
-        let vc  = item.pushView()!
-        self.delegate?.pushViewController(vc: vc)
-    }
-    
+    weak var tableViewControllerDelegate: MealTableViewControllerProtocol?
     
 }
-extension ListViewInteractor{
-    func registerCell(TableView tableView: UITableView){
-        let nibCell = UINib.init(nibName: "MealCell", bundle: nil)
-        tableView.register(nibCell, forCellReuseIdentifier: "MealCell")
-    }
-    func initData(){
+extension ListViewInteractor: ListViewInteractorProtocol{
+    func initData()->MenuData?{
         var tableData = [Meal]()
         tableData.append(Meal(name: "Meal1", photo: UIImage(named:"Image-1")!, description:
             """
@@ -127,6 +103,6 @@ extension ListViewInteractor{
             Serve with milk and sugar or honey.
             """, ingredients: ["Sugar","Salt"],percent: [50,50],author: "David Micheal"))
         
-        self.tableDataSource = MenuData(listMeal: ["Main": [tableData[0],tableData[1],tableData[2]], "Dessert":[tableData[3],tableData[4],tableData[5],tableData[6],tableData[7],tableData[8],tableData[9]]])
+        return MenuData(listMeal: ["Main": [tableData[0],tableData[1],tableData[2]], "Dessert":[tableData[3],tableData[4],tableData[5],tableData[6],tableData[7],tableData[8],tableData[9]]])
     }
 }
