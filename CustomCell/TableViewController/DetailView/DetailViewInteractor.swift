@@ -8,61 +8,30 @@
 
 import UIKit
 
-class DetailViewInteractor: UIViewController, UITableViewDelegate, UITableViewDataSource, DescriptionDelegate{
+protocol DetailViewInteractorProtocol:class{
+    func initData(meal: Meal)->TableData
+    func updateDesc(meal: Meal, desc: String)
+    func checkView(vc:UIViewController?)
+}
+
+
+
+class DetailViewInteractor: DetailViewInteractorProtocol{
+    
     
     //MARK: Properties
-    var tableData: TableData?
-    var meal: Meal?
-    weak var delegate: TableDelegate?
-    //UITableViewDelegate
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return tableData!.data.count
-    }
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return tableData!.data[section].values.first!.count
-    }
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let item = tableData!.data[indexPath.section].values.first![indexPath.row]
-        let cell = tableView.dequeueReusableCell(withIdentifier: type(of: item).reuseId)!
-        item.configure(cell: cell)
-        return cell
-    }
+    weak var detailTableDelegate: DetailTableViewControllerProtocol?
     
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return tableData!.data[section].keys.first!
+    func initData(meal: Meal)->TableData{
+        return TableData(meal: meal)
     }
-    //UITableViewDataSource
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let item = tableData!.data[indexPath.section].values.first![indexPath.row]
-        let vc  = item.pushView()
-        if let a = vc as? EditDescriptionController{
-            a.descDelegate = self
+    func updateDesc(meal: Meal, desc: String) {
+        meal.description = desc
+        self.detailTableDelegate?.reloadData()
+    }
+    func checkView(vc: UIViewController?) {
+        if vc != nil {
+            self.detailTableDelegate?.pushView(vc: vc!)
         }
-        if vc != nil{
-            self.delegate?.pushViewController(vc: vc!)
-        }
-    }
-    
-    //Additional function
-    func registerCell(table tableView: UITableView){
-        var nibCell = UINib.init(nibName: "DetailCell", bundle: nil)
-        tableView.register(nibCell, forCellReuseIdentifier: "DetailCell")
-        nibCell = UINib.init(nibName: "DescriptionCell", bundle: nil)
-        tableView.register(nibCell, forCellReuseIdentifier: "DescriptionCell")
-        nibCell = UINib.init(nibName: "AuthorCell", bundle: nil)
-        tableView.register(nibCell, forCellReuseIdentifier: "AuthorCell")
-        nibCell = UINib.init(nibName: "IngredientCell", bundle: nil)
-        tableView.register(nibCell, forCellReuseIdentifier: "IngredientCell")
-        nibCell = UINib.init(nibName: "MealCell", bundle: nil)
-        tableView.register(nibCell, forCellReuseIdentifier: "MealCell")
-    }
-    
-    func initData(){
-        tableData = TableData(meal: meal!)
-    }
-    func updateDesc(data: String) {
-        self.meal?.description = data
-        tableData = TableData(meal: meal!)
-        self.delegate?.reloadData()
     }
 }
