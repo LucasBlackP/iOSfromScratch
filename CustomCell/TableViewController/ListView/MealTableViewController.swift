@@ -9,7 +9,6 @@
 import UIKit
 
 protocol MealTableViewControllerProtocol:class{
-    
 }
 
 
@@ -51,8 +50,8 @@ class MealTableViewController: UIViewController, UITableViewDelegate, UITableVie
     //UITableViewDelegate
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let item = tableDataSource!.listMeal[indexPath.section].values.first![indexPath.row]
-        let vc  = item.pushView()!
-        navigationController?.pushViewController(vc, animated: true)
+        let viewController  = item.pushView()!
+        navigationController?.pushViewController(viewController, animated: true)
     }
 
     override func didReceiveMemoryWarning() {
@@ -61,8 +60,8 @@ class MealTableViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     
     //PushViewDelegate
-    func pushViewController(vc: UIViewController) {
-        navigationController?.pushViewController(vc, animated: true)
+    func pushViewController(viewController: UIViewController) {
+        navigationController?.pushViewController(viewController, animated: true)
     }
     func reloadData() {
         self.tableView.reloadData()
@@ -75,7 +74,7 @@ extension MealTableViewController{
         let nibCell = UINib.init(nibName: "MealCell", bundle: nil)
         tableView.register(nibCell, forCellReuseIdentifier: "MealCell")
     }
-    func configVI(){
+    func configVI(    ){
         self.listViewDelegate = interactor
         self.interactor.tableViewControllerDelegate = self
         self.tableDataSource = self.listViewDelegate?.initData()
