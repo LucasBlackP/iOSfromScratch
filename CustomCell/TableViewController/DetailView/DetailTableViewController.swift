@@ -10,7 +10,7 @@ import UIKit
 
 protocol DetailTableViewControllerProtocol:class{
    func reloadData()
-    func pushView(vc: UIViewController)
+    func pushView(viewController: UIViewController)
 }
 
 class DetailTableViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
@@ -54,11 +54,11 @@ class DetailTableViewController: UIViewController,UITableViewDelegate,UITableVie
     //UITableViewDataSource
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let item = tableData!.data[indexPath.section].values.first![indexPath.row]
-        let vc  = item.pushView()
-        if let a = vc as? EditDescriptionController{
-            a.descDelegate = self
+        let newViewController  = item.pushView()
+        if let viewController = newViewController as? EditDescriptionController{
+            viewController.descDelegate = self
         }
-        self.detailInteractorDelegate?.checkView(vc: vc)
+        self.detailInteractorDelegate?.checkView(viewController: newViewController)
         
     }
 }
@@ -72,8 +72,8 @@ extension DetailTableViewController: DetailTableViewControllerProtocol{
         tableData = self.detailInteractorDelegate?.initData(meal: meal!)
         tableView.reloadData()
     }
-    func pushView(vc: UIViewController) {
-        navigationController?.pushViewController(vc, animated: true)
+    func pushView(viewController: UIViewController) {
+        navigationController?.pushViewController(viewController, animated: true)
     }
 }
 

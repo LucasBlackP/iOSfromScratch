@@ -11,7 +11,7 @@ import UIKit
 protocol DetailViewInteractorProtocol:class{
     func initData(meal: Meal)->TableData
     func updateDesc(meal: Meal, desc: String)
-    func checkView(vc:UIViewController?)
+    func checkView(viewController:UIViewController?)
 }
 
 
@@ -29,9 +29,9 @@ class DetailViewInteractor: DetailViewInteractorProtocol{
         meal.description = desc
         self.detailTableDelegate?.reloadData()
     }
-    func checkView(vc: UIViewController?) {
-        if vc != nil {
-            self.detailTableDelegate?.pushView(vc: vc!)
+    func checkView(viewController: UIViewController?) {
+        if viewController != nil {
+            self.detailTableDelegate?.pushView(viewController: viewController!)
         }
     }
 }
