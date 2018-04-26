@@ -123,9 +123,9 @@
 			children = (
 				0F434EA92089D840002A4D7E /* Custom Cell */,
 				0F434EA62089D023002A4D7E /* Protocols */,
+				0F434E952089CD85002A4D7E /* NetworkLayer */,
 				0F434E972089CDE5002A4D7E /* Controllers */,
 				0F434E962089CD91002A4D7E /* ViewModels */,
-				0F434E952089CD85002A4D7E /* NetworkLayer */,
 				0F434E672089CD7B002A4D7E /* AppDelegate.swift */,
 				0F434E692089CD7B002A4D7E /* ViewController.swift */,
 				0F434E6B2089CD7B002A4D7E /* Main.storyboard */,
@@ -174,9 +174,9 @@
 		0F434E972089CDE5002A4D7E /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				0F434EA02089CE98002A4D7E /* ListItemViewInteractor.swift */,
 				0F434E9C2089CE8A002A4D7E /* ListItemViewController.swift */,
 				0F434E9D2089CE8A002A4D7E /* ListItemViewController.xib */,
-				0F434EA02089CE98002A4D7E /* ListItemViewInteractor.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";

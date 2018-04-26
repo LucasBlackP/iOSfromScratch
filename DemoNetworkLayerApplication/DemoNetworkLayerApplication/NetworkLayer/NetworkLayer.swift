@@ -7,19 +7,22 @@
 //
 
 import UIKit
-//Refactor
-enum Scheme: String {
-    case HTTP = "https"
-    case Proxy
-}
-
-class NetworkLayer: InteractorDelegate, NetworkProtocol{
-    var urlComponent: URLComponents?
-    weak var delegate: NetworkLayerDelegate?
+class NetworkLayer: NetworkProtocol{
+    //Properties
+    private static var networkLayerInstance = NetworkLayer()
+    internal var urlComponent: URLComponents?
+    internal weak var delegate: NetworkLayerDelegate?
+    //Initializer
+    private init(){
+    }
+    //Return reference to singleton object
+    class func singletonObject()->NetworkLayer{
+        return NetworkLayer.networkLayerInstance
+    }
     //Setting URL Component
-    func setUrlComponent(urlSchema schema: String,urlHost host: String,urlPath path: String){
+    func setUrlComponent(urlSchema schema: Schema,urlHost host: String,urlPath path: String){
         self.urlComponent = URLComponents()
-        self.urlComponent?.scheme = schema
+        self.urlComponent?.scheme = schema.rawValue
         self.urlComponent?.host = host
         self.urlComponent?.path = path
     }
@@ -33,9 +36,9 @@ class NetworkLayer: InteractorDelegate, NetworkProtocol{
         return URLSession(configuration: conf)
     }
     //Create URL Request
-    func createURLRequest(method: String)->URLRequest{
+    func createURLRequest(method: RequestMethod)->URLRequest{
         var urlRequest = URLRequest(url: (self.urlComponent?.url!)!)
-        urlRequest.httpMethod = method
+        urlRequest.httpMethod = method.rawValue
         return urlRequest
     }
     //Create data task with custom completion function
@@ -55,8 +58,12 @@ class NetworkLayer: InteractorDelegate, NetworkProtocol{
             }
         })
     }
-    //Crea
+}
+
+extension NetworkLayer: InteractorDelegate{
+    //Get data from server
     func getDataFromRequest(dataTask: URLSessionDataTask) {
         dataTask.resume()
     }
 }
+

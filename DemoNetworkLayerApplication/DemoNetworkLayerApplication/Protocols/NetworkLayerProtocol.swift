@@ -12,14 +12,30 @@ protocol NetworkLayerDelegate:class{
     func onDataLoaded(data: Data?)
 }
 
+enum Schema:String{
+    case http = "http"
+    case https = "https"
+    case ftp = "ftp"
+}
+
+enum RequestMethod:String{
+    case GET = "GET"
+    case POST = "POST"
+    case DELETE = "DELETE"
+    case PUT = "PUT"
+}
+
+//Older
 protocol  NetworkProtocol:class {
     var urlComponent: URLComponents? {get set}
     weak var delegate: NetworkLayerDelegate? {get set}
-    func setUrlComponent(urlSchema schema: String,urlHost host: String,urlPath path: String)
+    func setUrlComponent(urlSchema schema: Schema,urlHost host: String,urlPath path: String)
     func addQueryItem(keyItem key: String, valueItem value: String)
     func createSession(config conf: URLSessionConfiguration)->URLSession
-    func createURLRequest(method: String)->URLRequest
+    func createURLRequest(method: RequestMethod)->URLRequest
     func createDataTask(session: URLSession, withUrl url:URLRequest,completion _completion: @escaping (_ data:Data?,_ urlResponse: URLResponse?,_ error: Error?)->Void)->URLSessionDataTask
     func createDataTask(session: URLSession, withUrl url:URLRequest)->URLSessionDataTask?
     func getDataFromRequest(dataTask: URLSessionDataTask)
 }
+
+

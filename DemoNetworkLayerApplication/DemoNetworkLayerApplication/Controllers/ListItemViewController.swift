@@ -17,22 +17,18 @@ class ListItemViewController: UIViewController {
     var listData: CellForListViewModel?
     weak var controllerDelegate: ListItemViewControllerDelegate?
     var spinner: UIView?
-    var interactor = ListItemViewIneractor()
+    var interactor = ListItemViewInteractor()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-       configureVI()
+        // Confifure View - Interactor
+        configureVI()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
-    
-
 }
 
 extension ListItemViewController:UITableViewDataSource{
@@ -51,14 +47,11 @@ extension ListItemViewController:UITableViewDataSource{
         item.configure(cell: cell)
         return cell
     }
-
-
 }
 extension ListItemViewController:UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
     }
-    
 }
 extension ListItemViewController: ListItemInteractorDelegate{
     //List Item Interactor Delegate
@@ -79,9 +72,9 @@ extension ListItemViewController{
     func configureVI(){
         self.controllerDelegate = interactor
         interactor.listItemDelegate = self
-        interactor.network = NetworkLayer()
+        interactor.network = NetworkLayer.singletonObject()
         spinner = interactor.displaySpinner(onView: self.view)
-        self.controllerDelegate?.getDataFromServer()
+        self.controllerDelegate?.getDataFromServer(urlSchema: .https, urlHost: "fierce-cove-29863.herokuapp.com", urlPath: "/getAllPosts", query: [])
         self.tableView.delegate = self
         self.tableView.dataSource = self
         registerCell()

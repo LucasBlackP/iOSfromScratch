@@ -8,5 +8,5 @@
 
 import Foundation
 protocol ListItemViewControllerDelegate: class{
-    func getDataFromServer()
+    func getDataFromServer(urlSchema: Schema, urlHost: String, urlPath: String,query: [QueryItem])
 }

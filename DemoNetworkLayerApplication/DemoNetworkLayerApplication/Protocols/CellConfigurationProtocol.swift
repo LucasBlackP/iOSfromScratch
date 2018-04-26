@@ -22,13 +22,8 @@ protocol CellConfigurator {
 }
 
 class TableCellConfigurator<CellType: ConfigurableCell, DataType>: CellConfigurator where CellType.DataType == DataType, CellType: UITableViewCell {
-    
-    
-    
     static var reuseId: String { return String(describing: CellType.self) }
-    
     let item: DataType
-    
     init(item: DataType) {
         self.item = item
     }
@@ -39,5 +34,4 @@ class TableCellConfigurator<CellType: ConfigurableCell, DataType>: CellConfigura
         let b = CellType()
         return b.pushView(data: item)
     }
-    
 }

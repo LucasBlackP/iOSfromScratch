@@ -8,23 +8,32 @@
 
 import UIKit
 
+struct QueryItem{
+    var key: String
+    var value: String
+}
 
-
-class ListItemViewIneractor: NetworkLayerDelegate, ListItemViewControllerDelegate{
+class ListItemViewInteractor{
     var list = [ListViewModel]()
     weak var interactorDelegate: InteractorDelegate?
     weak var listItemDelegate: ListItemInteractorDelegate?
     var network: NetworkProtocol?
     //Load data from server
-    func loadDataFromServer(){
+    func loadDataFromServer(urlSchema: Schema, urlHost: String, urlPath: String,query: [QueryItem]){
         network?.delegate = self
-        self.interactorDelegate = network as! InteractorDelegate
-        network?.setUrlComponent(urlSchema: "https", urlHost: "fierce-cove-29863.herokuapp.com", urlPath: "/getAllPosts")
-        let request = network?.createURLRequest(method: "GET")
+        self.interactorDelegate = network as? InteractorDelegate
+        network?.setUrlComponent(urlSchema: urlSchema, urlHost: urlHost, urlPath: urlPath)
+        for item in query{
+            network?.addQueryItem(keyItem: item.key, valueItem: item.value)
+        }
+        let request = network?.createURLRequest(method: .GET)
         let session = network?.createSession(config: .default)
         self.interactorDelegate?.getDataFromRequest(dataTask: (network?.createDataTask(session: session!, withUrl: request!))!)
     }
-    
+
+}
+
+extension ListItemViewInteractor: NetworkLayerDelegate{
     //Network Delegate
     func onDataLoaded(data: Data?) {
         do{
@@ -38,22 +47,25 @@ class ListItemViewIneractor: NetworkLayerDelegate, ListItemViewControllerDelegat
             fatalError("Couldn't parse data to Json")
         }
     }
+}
+
+extension ListItemViewInteractor:  ListItemViewControllerDelegate{
     //List Item Controller Delegate
-    func getDataFromServer() {
-        loadDataFromServer()
+    func getDataFromServer(urlSchema: Schema, urlHost: String, urlPath: String,query: [QueryItem]) {
+        loadDataFromServer(urlSchema: urlSchema, urlHost: urlHost, urlPath: urlPath,query: query)
     }
 }
 
-extension ListItemViewIneractor{
+extension ListItemViewInteractor{
     //MARK: Additional function
     func displaySpinner(onView : UIView) -> UIView {
         let spinnerView = UIView.init(frame: UIScreen.main.bounds)
         spinnerView.backgroundColor = UIColor.init(red: 0.5, green: 0.5, blue: 0.5, alpha: 0.5)
-        let ai = UIActivityIndicatorView.init(activityIndicatorStyle: .whiteLarge)
-        ai.startAnimating()
-        ai.center = spinnerView.center
+        let activityIndicator = UIActivityIndicatorView.init(activityIndicatorStyle: .whiteLarge)
+        activityIndicator.startAnimating()
+        activityIndicator.center = spinnerView.center
         DispatchQueue.main.async {
-            spinnerView.addSubview(ai)
+            spinnerView.addSubview(activityIndicator)
             onView.addSubview(spinnerView)
         }
         return spinnerView

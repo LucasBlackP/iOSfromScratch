@@ -31,7 +31,6 @@ class ItemCell: UITableViewCell, ConfigurableCell {
         let url:NSURL = NSURL(string: data.thumbUrl)!
         let dataImage = NSData(contentsOf: url as URL)
         photo?.image = UIImage(data: dataImage! as Data)
-        //imageView?.image = UIImage(named: "image")
     }
     func pushView(data: ListViewModel) -> UIViewController? {
         //TODO: later
