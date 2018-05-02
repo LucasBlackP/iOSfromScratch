@@ -10,7 +10,6 @@
 		0F434E682089CD7B002A4D7E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F434E672089CD7B002A4D7E /* AppDelegate.swift */; };
 		0F434E6A2089CD7B002A4D7E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F434E692089CD7B002A4D7E /* ViewController.swift */; };
 		0F434E6D2089CD7B002A4D7E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F434E6B2089CD7B002A4D7E /* Main.storyboard */; };
-		0F434E6F2089CD7B002A4D7E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F434E6E2089CD7B002A4D7E /* Assets.xcassets */; };
 		0F434E722089CD7B002A4D7E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F434E702089CD7B002A4D7E /* LaunchScreen.storyboard */; };
 		0F434E7D2089CD7B002A4D7E /* DemoNetworkLayerApplicationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F434E7C2089CD7B002A4D7E /* DemoNetworkLayerApplicationTests.swift */; };
 		0F434E882089CD7B002A4D7E /* DemoNetworkLayerApplicationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F434E872089CD7B002A4D7E /* DemoNetworkLayerApplicationUITests.swift */; };
@@ -25,7 +24,7 @@
 		0F434EAC2089D88A002A4D7E /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F434EAA2089D88A002A4D7E /* ItemCell.swift */; };
 		0F434EAF2089DAAA002A4D7E /* CellConfigurationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F434EAE2089DAAA002A4D7E /* CellConfigurationProtocol.swift */; };
 		0F434EB12089DDDD002A4D7E /* TableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F434EB02089DDDD002A4D7E /* TableViewModel.swift */; };
-		0F434EB32089FD5D002A4D7E /* ItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F434EB22089FD5D002A4D7E /* ItemCell.xib */; };
+		0F576712209953AB00766E3C /* ItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F576711209953AB00766E3C /* ItemCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,7 +49,6 @@
 		0F434E672089CD7B002A4D7E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0F434E692089CD7B002A4D7E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0F434E6C2089CD7B002A4D7E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		0F434E6E2089CD7B002A4D7E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0F434E712089CD7B002A4D7E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0F434E732089CD7B002A4D7E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0F434E782089CD7B002A4D7E /* DemoNetworkLayerApplicationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DemoNetworkLayerApplicationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -70,7 +68,7 @@
 		0F434EAA2089D88A002A4D7E /* ItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
 		0F434EAE2089DAAA002A4D7E /* CellConfigurationProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellConfigurationProtocol.swift; sourceTree = "<group>"; };
 		0F434EB02089DDDD002A4D7E /* TableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewModel.swift; sourceTree = "<group>"; };
-		0F434EB22089FD5D002A4D7E /* ItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ItemCell.xib; path = ../../../../../../.Trash/ItemCell.xib; sourceTree = "<group>"; };
+		0F576711209953AB00766E3C /* ItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ItemCell.xib; path = "../../../../../SwiftProjects/DemoNetworkLayerApplication/DemoNetworkLayerApplication/Custom Cell/ItemCell.xib"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,7 +119,7 @@
 		0F434E662089CD7B002A4D7E /* DemoNetworkLayerApplication */ = {
 			isa = PBXGroup;
 			children = (
-				0F434EA92089D840002A4D7E /* Custom Cell */,
+				0F434EA92089D840002A4D7E /* ItemCell.xib */,
 				0F434EA62089D023002A4D7E /* Protocols */,
 				0F434E952089CD85002A4D7E /* NetworkLayer */,
 				0F434E972089CDE5002A4D7E /* Controllers */,
@@ -129,7 +127,6 @@
 				0F434E672089CD7B002A4D7E /* AppDelegate.swift */,
 				0F434E692089CD7B002A4D7E /* ViewController.swift */,
 				0F434E6B2089CD7B002A4D7E /* Main.storyboard */,
-				0F434E6E2089CD7B002A4D7E /* Assets.xcassets */,
 				0F434E702089CD7B002A4D7E /* LaunchScreen.storyboard */,
 				0F434E732089CD7B002A4D7E /* Info.plist */,
 			);
@@ -192,13 +189,13 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
-		0F434EA92089D840002A4D7E /* Custom Cell */ = {
+		0F434EA92089D840002A4D7E /* ItemCell.xib */ = {
 			isa = PBXGroup;
 			children = (
 				0F434EAA2089D88A002A4D7E /* ItemCell.swift */,
-				0F434EB22089FD5D002A4D7E /* ItemCell.xib */,
+				0F576711209953AB00766E3C /* ItemCell.xib */,
 			);
-			path = "Custom Cell";
+			path = ItemCell.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -310,8 +307,7 @@
 			files = (
 				0F434E722089CD7B002A4D7E /* LaunchScreen.storyboard in Resources */,
 				0F434E9F2089CE8A002A4D7E /* ListItemViewController.xib in Resources */,
-				0F434EB32089FD5D002A4D7E /* ItemCell.xib in Resources */,
-				0F434E6F2089CD7B002A4D7E /* Assets.xcassets in Resources */,
+				0F576712209953AB00766E3C /* ItemCell.xib in Resources */,
 				0F434E6D2089CD7B002A4D7E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
