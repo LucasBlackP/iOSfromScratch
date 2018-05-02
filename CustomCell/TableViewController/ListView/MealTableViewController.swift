@@ -61,6 +61,9 @@ class MealTableViewController: UIViewController, UITableViewDelegate, UITableVie
     
     //PushViewDelegate
     func pushViewController(viewController: UIViewController) {
+        UIView.animate(withDuration: 9, animations: {
+            
+        })
         navigationController?.pushViewController(viewController, animated: true)
     }
     func reloadData() {
