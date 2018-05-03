@@ -9,11 +9,8 @@
 import UIKit
 
 protocol ListItemViewProtocol: class{
-    var presenter: ListItemPresenterProtocol{get set}
+    var presenter: ListItemPresenterProtocol? {get set}
     func onDataReady(data: CellForListViewModel?)
     func updateDataSource(data: CellForListViewModel?)
 }
 
-protocol ListItemViewControllerDelegate: class{
-    func getDataFromServer(urlSchema: Schema, urlHost: String, urlPath: String,query: [QueryItem])
-}

@@ -6,7 +6,7 @@
 //  Copyright © 2018 cpu12130-local. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 struct ListViewModel: Codable{
     var id: Int

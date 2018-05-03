@@ -10,24 +10,34 @@ import UIKit
 
 
 
-class ListItemViewController: UIViewController {
-
+class ListItemViewController: UIViewController, ListItemViewProtocol {
+    
     //MARK: Properties
     @IBOutlet weak var tableView: UITableView!
     var listData: CellForListViewModel?
-    weak var controllerDelegate: ListItemViewControllerDelegate?
     var spinner: UIView?
-    var interactor = ListItemViewInteractor()
+    var presenter: ListItemPresenterProtocol?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Confifure View - Interactor
-        configureVI()
+        configureVP()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    func onDataReady(data: CellForListViewModel?) {
+        self.listData = data
+        self.tableView.reloadData()
+        self.presenter?.removeSpinner(spinner: spinner!)
+    }
+    func updateDataSource(data: CellForListViewModel?) {
+        self.listData = data
+        spinner = presenter?.displaySpinner(onView: self.view)
+        self.tableView.reloadData()
+        self.presenter?.removeSpinner(spinner: spinner!)
     }
 }
 
@@ -47,34 +57,20 @@ extension ListItemViewController:UITableViewDataSource{
         item.configure(cell: cell)
         return cell
     }
+
 }
 extension ListItemViewController:UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        presenter?.showItemDetail(for: (listData?.listItem![indexPath.row])!)
     }
 }
-extension ListItemViewController: InteractorListItemDelegate{
-    //List Item Interactor Delegate
-    func onDataReady(data: CellForListViewModel?) {
-        self.listData = data
-        self.tableView.reloadData()
-        self.interactor.removeSpinner(spinner: spinner!)
-    }
-    func updateDataSource(data: CellForListViewModel?) {
-        self.listData = data
-        spinner = interactor.displaySpinner(onView: self.view)
-        self.tableView.reloadData()
-        self.interactor.removeSpinner(spinner: spinner!)
-    }
-}
+
 extension ListItemViewController{
     //MARK: Additional function
-    func configureVI(){
-        self.controllerDelegate = interactor
-        interactor.listItemDelegate = self
-        interactor.network = NetworkLayer.sharedInstance
-        spinner = interactor.displaySpinner(onView: self.view)
-        self.controllerDelegate?.getDataFromServer(urlSchema: .https, urlHost: "fierce-cove-29863.herokuapp.com", urlPath: "/getAllPosts", query: [])
+    func configureVP(){
+        self.title = "List View"
+        spinner = presenter?.displaySpinner(onView: self.view)
+        self.presenter?.getDataFromServer(urlSchema: .https, urlHost: "fierce-cove-29863.herokuapp.com", urlPath: "/getAllPosts", query: [])
         self.tableView.delegate = self
         self.tableView.dataSource = self
         registerCell()

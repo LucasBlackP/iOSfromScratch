@@ -1,14 +1,14 @@
 //
-//  HomeViewController.swift
+//  SearchViewController.swift
 //  DemoNetworkLayerApplication
 //
-//  Created by cpu12130-local on 5/2/18.
+//  Created by cpu12130-local on 5/3/18.
 //  Copyright © 2018 cpu12130-local. All rights reserved.
 //
 
 import UIKit
 
-class HomeViewController: UIViewController {
+class SearchViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

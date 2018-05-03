@@ -10,17 +10,8 @@ import UIKit
 
 protocol ListItemInteractorProtocol:class {
     var list:[ListViewModel]{get set}
-    weak var interactorDelegate: InteractorNetworkDelegate?{get set}
-    weak var listItemDelegate: InteractorListItemDelegate?{get set}
     var network: NetworkProtocol?{get set}
-    
+    weak var presenter: ListItemPresenterProtocol?{get set}
+    func loadDataFromServer(urlSchema: Schema, urlHost: String, urlPath: String,query: [QueryItem])
 }
 
-protocol InteractorNetworkDelegate:class{
-    func getDataFromRequest(dataTask: URLSessionDataTask)
-}
-
-protocol InteractorListItemDelegate:class{
-    func onDataReady(data: CellForListViewModel?)
-    func upDateDataSource(data: CellForListViewModel?)
-}

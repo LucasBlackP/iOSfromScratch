@@ -22,19 +22,28 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView autoresizesSubviews="NO" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" contentInsetAdjustmentBehavior="never" style="grouped" separatorStyle="default" rowHeight="120" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="ZeD-FX-fNP">
-                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <rect key="frame" x="0.0" y="44" width="320" height="524"/>
                     <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                 </tableView>
+                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7ZN-Jb-Mmu">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                    <items>
+                        <navigationItem title="Title" id="1s1-ox-RCZ"/>
+                    </items>
+                </navigationBar>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="ZeD-FX-fNP" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="0Fj-u6-kof"/>
-                <constraint firstItem="ZeD-FX-fNP" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="EH5-sP-kCJ"/>
-                <constraint firstItem="ZeD-FX-fNP" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="RX8-cV-ck3"/>
-                <constraint firstItem="ZeD-FX-fNP" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="iBQ-Sh-LFU"/>
+                <constraint firstItem="7ZN-Jb-Mmu" firstAttribute="trailing" secondItem="ZeD-FX-fNP" secondAttribute="trailing" id="2Sf-Ce-Dm3"/>
+                <constraint firstItem="ZeD-FX-fNP" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="9aP-1o-Mlw"/>
+                <constraint firstItem="7ZN-Jb-Mmu" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="F8i-Ra-yqF"/>
+                <constraint firstItem="ZeD-FX-fNP" firstAttribute="top" secondItem="7ZN-Jb-Mmu" secondAttribute="bottom" id="McV-Za-V41"/>
+                <constraint firstItem="7ZN-Jb-Mmu" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Mf3-wz-8ZL"/>
+                <constraint firstItem="7ZN-Jb-Mmu" firstAttribute="leading" secondItem="ZeD-FX-fNP" secondAttribute="leading" id="UUp-QJ-rLY"/>
+                <constraint firstAttribute="trailing" secondItem="7ZN-Jb-Mmu" secondAttribute="trailing" id="tVb-DR-Fm1"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <point key="canvasLocation" x="26.5" y="51.5"/>
+            <point key="canvasLocation" x="26" y="51"/>
         </view>
     </objects>
 </document>

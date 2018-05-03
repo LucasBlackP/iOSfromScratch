@@ -54,12 +54,10 @@ class NetworkLayer: NetworkProtocol{
             }
         })
     }
-}
-
-extension NetworkLayer: InteractorNetworkDelegate{
     //Get data from server
     func getDataFromRequest(dataTask: URLSessionDataTask) {
         dataTask.resume()
     }
 }
+
 

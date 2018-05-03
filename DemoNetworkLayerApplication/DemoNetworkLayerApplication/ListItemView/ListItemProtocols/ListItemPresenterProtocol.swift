@@ -9,9 +9,13 @@
 import UIKit
 
 protocol ListItemPresenterProtocol: class {
-    var view: ListItemViewProtocol {get set}
-    var interactor: ListItemInteractorProtocol {get set}
-    var wireframe: ListItemWireframeProtocol {get set}
+    weak var view: ListItemViewProtocol? {get set}
+    var interactor: ListItemInteractorProtocol? {get set}
+    var wireframe: ListItemWireframeProtocol? {get set}
     func getDataFromServer(urlSchema: Schema, urlHost: String, urlPath: String,query: [QueryItem])
+    func onDataReady(data: CellForListViewModel)
+    func displaySpinner(onView : UIView) -> UIView
+    func removeSpinner(spinner : UIView)
+    func showItemDetail(for item: ListViewModel)
 }
 

@@ -8,6 +8,7 @@
 
 import UIKit
 
-class ListItemWireframeProtocol: class{
-    
+protocol ListItemWireframeProtocol: class{
+    static func createListItemModule()->UIViewController
+    func createDetailScreen(from view: ListItemViewProtocol, with item: ListViewModel)
 }
