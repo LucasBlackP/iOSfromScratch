@@ -6,7 +6,14 @@
 //  Copyright © 2018 cpu12130-local. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+protocol ListItemViewProtocol: class{
+    var presenter: ListItemPresenterProtocol{get set}
+    func onDataReady(data: CellForListViewModel?)
+    func updateDataSource(data: CellForListViewModel?)
+}
+
 protocol ListItemViewControllerDelegate: class{
     func getDataFromServer(urlSchema: Schema, urlHost: String, urlPath: String,query: [QueryItem])
 }

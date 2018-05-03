@@ -53,14 +53,14 @@ extension ListItemViewController:UITableViewDelegate{
         
     }
 }
-extension ListItemViewController: ListItemInteractorDelegate{
+extension ListItemViewController: InteractorListItemDelegate{
     //List Item Interactor Delegate
     func onDataReady(data: CellForListViewModel?) {
         self.listData = data
         self.tableView.reloadData()
         self.interactor.removeSpinner(spinner: spinner!)
     }
-    func upDateDataSource(data: CellForListViewModel?) {
+    func updateDataSource(data: CellForListViewModel?) {
         self.listData = data
         spinner = interactor.displaySpinner(onView: self.view)
         self.tableView.reloadData()
@@ -72,7 +72,7 @@ extension ListItemViewController{
     func configureVI(){
         self.controllerDelegate = interactor
         interactor.listItemDelegate = self
-        interactor.network = NetworkLayer.singletonObject()
+        interactor.network = NetworkLayer.sharedInstance
         spinner = interactor.displaySpinner(onView: self.view)
         self.controllerDelegate?.getDataFromServer(urlSchema: .https, urlHost: "fierce-cove-29863.herokuapp.com", urlPath: "/getAllPosts", query: [])
         self.tableView.delegate = self

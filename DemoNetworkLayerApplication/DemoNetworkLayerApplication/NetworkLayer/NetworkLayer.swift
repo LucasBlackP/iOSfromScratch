@@ -9,15 +9,11 @@
 import UIKit
 class NetworkLayer: NetworkProtocol{
     //Properties
-    private static var networkLayerInstance = NetworkLayer()
+    static var sharedInstance = NetworkLayer()
     internal var urlComponent: URLComponents?
     internal weak var delegate: NetworkLayerDelegate?
     //Initializer
     private init(){
-    }
-    //Return reference to singleton object
-    class func singletonObject()->NetworkLayer{
-        return NetworkLayer.networkLayerInstance
     }
     //Setting URL Component
     func setUrlComponent(urlSchema schema: Schema,urlHost host: String,urlPath path: String){
@@ -60,7 +56,7 @@ class NetworkLayer: NetworkProtocol{
     }
 }
 
-extension NetworkLayer: InteractorDelegate{
+extension NetworkLayer: InteractorNetworkDelegate{
     //Get data from server
     func getDataFromRequest(dataTask: URLSessionDataTask) {
         dataTask.resume()

@@ -32,23 +32,21 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView autoresizesSubviews="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="162" placeholderIntrinsicHeight="162" preservesSuperviewLayoutMargins="YES" image="image" translatesAutoresizingMaskIntoConstraints="NO" id="rnf-0y-Si6">
+                    <imageView autoresizesSubviews="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="162" placeholderIntrinsicHeight="162" preservesSuperviewLayoutMargins="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rnf-0y-Si6">
                         <rect key="frame" x="20" y="14" width="91" height="91"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="rnf-0y-Si6" secondAttribute="height" multiplier="1:1" id="MkH-3l-X6b"/>
-                            <constraint firstAttribute="width" constant="91" id="evg-Nk-Rsx"/>
-                            <constraint firstAttribute="height" constant="91" id="h7N-eP-xaX"/>
                         </constraints>
                     </imageView>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="rnf-0y-Si6" firstAttribute="top" secondItem="0ew-md-ciQ" secondAttribute="topMargin" constant="3" id="2eD-Gm-ysV"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="rnf-0y-Si6" secondAttribute="bottom" constant="4" id="5Qd-x8-TXc"/>
-                    <constraint firstItem="rnf-0y-Si6" firstAttribute="leading" secondItem="0ew-md-ciQ" secondAttribute="leadingMargin" id="H4u-fV-i71"/>
-                    <constraint firstItem="B8N-S5-7M8" firstAttribute="leading" secondItem="0ew-md-ciQ" secondAttribute="leading" constant="164" id="Vag-h1-iNU"/>
-                    <constraint firstItem="rSN-Xo-mC2" firstAttribute="top" secondItem="B8N-S5-7M8" secondAttribute="bottom" constant="49" id="eJY-2D-zt0"/>
-                    <constraint firstItem="B8N-S5-7M8" firstAttribute="top" secondItem="rnf-0y-Si6" secondAttribute="top" id="iV0-zU-Qf5"/>
-                    <constraint firstItem="rSN-Xo-mC2" firstAttribute="leading" secondItem="B8N-S5-7M8" secondAttribute="leading" id="xfJ-7u-KjY"/>
+                    <constraint firstItem="B8N-S5-7M8" firstAttribute="leading" secondItem="rnf-0y-Si6" secondAttribute="trailing" constant="53" id="AZ5-NZ-J7i"/>
+                    <constraint firstItem="rnf-0y-Si6" firstAttribute="centerY" secondItem="0ew-md-ciQ" secondAttribute="centerY" id="XHP-bb-Drj"/>
+                    <constraint firstItem="rnf-0y-Si6" firstAttribute="top" secondItem="B8N-S5-7M8" secondAttribute="top" id="bnD-LU-1wg"/>
+                    <constraint firstItem="B8N-S5-7M8" firstAttribute="leading" secondItem="rSN-Xo-mC2" secondAttribute="leading" id="e9E-Tw-2yO"/>
+                    <constraint firstItem="rnf-0y-Si6" firstAttribute="bottom" secondItem="rSN-Xo-mC2" secondAttribute="bottom" id="eKN-fc-wxb"/>
+                    <constraint firstItem="rnf-0y-Si6" firstAttribute="top" secondItem="0ew-md-ciQ" secondAttribute="topMargin" constant="3" id="n3a-Ee-zGn"/>
+                    <constraint firstItem="rnf-0y-Si6" firstAttribute="leading" secondItem="0ew-md-ciQ" secondAttribute="leadingMargin" id="t2T-JU-yva"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
@@ -59,7 +57,4 @@
             <point key="canvasLocation" x="16" y="96"/>
         </tableViewCell>
     </objects>
-    <resources>
-        <image name="image" width="560" height="375"/>
-    </resources>
 </document>

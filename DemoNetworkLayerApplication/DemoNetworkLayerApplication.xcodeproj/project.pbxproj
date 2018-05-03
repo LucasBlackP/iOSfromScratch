@@ -24,7 +24,14 @@
 		0F434EAC2089D88A002A4D7E /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F434EAA2089D88A002A4D7E /* ItemCell.swift */; };
 		0F434EAF2089DAAA002A4D7E /* CellConfigurationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F434EAE2089DAAA002A4D7E /* CellConfigurationProtocol.swift */; };
 		0F434EB12089DDDD002A4D7E /* TableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F434EB02089DDDD002A4D7E /* TableViewModel.swift */; };
-		0F576712209953AB00766E3C /* ItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F576711209953AB00766E3C /* ItemCell.xib */; };
+		0F56C7CC209AAE5700189804 /* ListItemPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F56C7CB209AAE5700189804 /* ListItemPresenter.swift */; };
+		0F56C7CE209AAE6F00189804 /* ListItemWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F56C7CD209AAE6F00189804 /* ListItemWireframe.swift */; };
+		0F56C7D1209AAF0D00189804 /* ItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F56C7D0209AAF0D00189804 /* ItemCell.xib */; };
+		0F56C7D3209AB48C00189804 /* ListItemPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F56C7D2209AB48C00189804 /* ListItemPresenterProtocol.swift */; };
+		0F56C7D5209AB5A800189804 /* ListItemWireframeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F56C7D4209AB5A800189804 /* ListItemWireframeProtocol.swift */; };
+		0F5767152099589200766E3C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5767132099589200766E3C /* HomeViewController.swift */; };
+		0F5767162099589200766E3C /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F5767142099589200766E3C /* HomeViewController.xib */; };
+		0F576718209959D000766E3C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F576717209959D000766E3C /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,7 +75,14 @@
 		0F434EAA2089D88A002A4D7E /* ItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
 		0F434EAE2089DAAA002A4D7E /* CellConfigurationProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellConfigurationProtocol.swift; sourceTree = "<group>"; };
 		0F434EB02089DDDD002A4D7E /* TableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewModel.swift; sourceTree = "<group>"; };
-		0F576711209953AB00766E3C /* ItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ItemCell.xib; path = "../../../../../SwiftProjects/DemoNetworkLayerApplication/DemoNetworkLayerApplication/Custom Cell/ItemCell.xib"; sourceTree = "<group>"; };
+		0F56C7CB209AAE5700189804 /* ListItemPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemPresenter.swift; sourceTree = "<group>"; };
+		0F56C7CD209AAE6F00189804 /* ListItemWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemWireframe.swift; sourceTree = "<group>"; };
+		0F56C7D0209AAF0D00189804 /* ItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ItemCell.xib; sourceTree = "<group>"; };
+		0F56C7D2209AB48C00189804 /* ListItemPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemPresenterProtocol.swift; sourceTree = "<group>"; };
+		0F56C7D4209AB5A800189804 /* ListItemWireframeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemWireframeProtocol.swift; sourceTree = "<group>"; };
+		0F5767132099589200766E3C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		0F5767142099589200766E3C /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		0F576717209959D000766E3C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../../../SwiftProjects/DemoNetworkLayerApplication/DemoNetworkLayerApplication/Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,14 +133,15 @@
 		0F434E662089CD7B002A4D7E /* DemoNetworkLayerApplication */ = {
 			isa = PBXGroup;
 			children = (
-				0F434EA92089D840002A4D7E /* ItemCell.xib */,
+				0F56C7C5209AACA600189804 /* DetailView */,
+				0F56C7C4209AAC6500189804 /* ListItemView */,
+				0F56C7CF209AAE9300189804 /* CustomCell */,
 				0F434EA62089D023002A4D7E /* Protocols */,
 				0F434E952089CD85002A4D7E /* NetworkLayer */,
-				0F434E972089CDE5002A4D7E /* Controllers */,
-				0F434E962089CD91002A4D7E /* ViewModels */,
 				0F434E672089CD7B002A4D7E /* AppDelegate.swift */,
 				0F434E692089CD7B002A4D7E /* ViewController.swift */,
 				0F434E6B2089CD7B002A4D7E /* Main.storyboard */,
+				0F576717209959D000766E3C /* Assets.xcassets */,
 				0F434E702089CD7B002A4D7E /* LaunchScreen.storyboard */,
 				0F434E732089CD7B002A4D7E /* Info.plist */,
 			);
@@ -159,31 +174,21 @@
 			path = NetworkLayer;
 			sourceTree = "<group>";
 		};
-		0F434E962089CD91002A4D7E /* ViewModels */ = {
+		0F434E972089CDE5002A4D7E /* ListItemViews */ = {
 			isa = PBXGroup;
 			children = (
-				0F434E9A2089CE6C002A4D7E /* ListViewModel.swift */,
-				0F434EB02089DDDD002A4D7E /* TableViewModel.swift */,
-			);
-			path = ViewModels;
-			sourceTree = "<group>";
-		};
-		0F434E972089CDE5002A4D7E /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				0F434EA02089CE98002A4D7E /* ListItemViewInteractor.swift */,
 				0F434E9C2089CE8A002A4D7E /* ListItemViewController.swift */,
 				0F434E9D2089CE8A002A4D7E /* ListItemViewController.xib */,
+				0F5767132099589200766E3C /* HomeViewController.swift */,
+				0F5767142099589200766E3C /* HomeViewController.xib */,
 			);
-			path = Controllers;
+			path = ListItemViews;
 			sourceTree = "<group>";
 		};
 		0F434EA62089D023002A4D7E /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
 				0F434EA22089CFE4002A4D7E /* NetworkLayerProtocol.swift */,
-				0F434EA42089D012002A4D7E /* InteractorProtocol.swift */,
-				0F434EA72089D688002A4D7E /* ListItemControllerProtocol.swift */,
 				0F434EAE2089DAAA002A4D7E /* CellConfigurationProtocol.swift */,
 			);
 			path = Protocols;
@@ -193,9 +198,81 @@
 			isa = PBXGroup;
 			children = (
 				0F434EAA2089D88A002A4D7E /* ItemCell.swift */,
-				0F576711209953AB00766E3C /* ItemCell.xib */,
+				0F56C7D0209AAF0D00189804 /* ItemCell.xib */,
 			);
 			path = ItemCell.xib;
+			sourceTree = "<group>";
+		};
+		0F56C7C4209AAC6500189804 /* ListItemView */ = {
+			isa = PBXGroup;
+			children = (
+				0F56C7C6209AACE000189804 /* ListItemProtocols */,
+				0F434E972089CDE5002A4D7E /* ListItemViews */,
+				0F56C7C9209AADDD00189804 /* ListItemPresenter */,
+				0F56C7CA209AAE0E00189804 /* ListItemInteractor */,
+				0F56C7C7209AAD0000189804 /* ListItemEnitities */,
+				0F56C7C8209AADAE00189804 /* ListItemWireFrame */,
+			);
+			path = ListItemView;
+			sourceTree = "<group>";
+		};
+		0F56C7C5209AACA600189804 /* DetailView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DetailView;
+			sourceTree = "<group>";
+		};
+		0F56C7C6209AACE000189804 /* ListItemProtocols */ = {
+			isa = PBXGroup;
+			children = (
+				0F434EA72089D688002A4D7E /* ListItemControllerProtocol.swift */,
+				0F434EA42089D012002A4D7E /* InteractorProtocol.swift */,
+				0F56C7D2209AB48C00189804 /* ListItemPresenterProtocol.swift */,
+				0F56C7D4209AB5A800189804 /* ListItemWireframeProtocol.swift */,
+			);
+			path = ListItemProtocols;
+			sourceTree = "<group>";
+		};
+		0F56C7C7209AAD0000189804 /* ListItemEnitities */ = {
+			isa = PBXGroup;
+			children = (
+				0F434E9A2089CE6C002A4D7E /* ListViewModel.swift */,
+				0F434EB02089DDDD002A4D7E /* TableViewModel.swift */,
+			);
+			path = ListItemEnitities;
+			sourceTree = "<group>";
+		};
+		0F56C7C8209AADAE00189804 /* ListItemWireFrame */ = {
+			isa = PBXGroup;
+			children = (
+				0F56C7CD209AAE6F00189804 /* ListItemWireframe.swift */,
+			);
+			path = ListItemWireFrame;
+			sourceTree = "<group>";
+		};
+		0F56C7C9209AADDD00189804 /* ListItemPresenter */ = {
+			isa = PBXGroup;
+			children = (
+				0F56C7CB209AAE5700189804 /* ListItemPresenter.swift */,
+			);
+			path = ListItemPresenter;
+			sourceTree = "<group>";
+		};
+		0F56C7CA209AAE0E00189804 /* ListItemInteractor */ = {
+			isa = PBXGroup;
+			children = (
+				0F434EA02089CE98002A4D7E /* ListItemViewInteractor.swift */,
+			);
+			path = ListItemInteractor;
+			sourceTree = "<group>";
+		};
+		0F56C7CF209AAE9300189804 /* CustomCell */ = {
+			isa = PBXGroup;
+			children = (
+				0F434EA92089D840002A4D7E /* ItemCell.xib */,
+			);
+			path = CustomCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -307,7 +384,9 @@
 			files = (
 				0F434E722089CD7B002A4D7E /* LaunchScreen.storyboard in Resources */,
 				0F434E9F2089CE8A002A4D7E /* ListItemViewController.xib in Resources */,
-				0F576712209953AB00766E3C /* ItemCell.xib in Resources */,
+				0F5767162099589200766E3C /* HomeViewController.xib in Resources */,
+				0F56C7D1209AAF0D00189804 /* ItemCell.xib in Resources */,
+				0F576718209959D000766E3C /* Assets.xcassets in Resources */,
 				0F434E6D2089CD7B002A4D7E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -343,8 +422,13 @@
 				0F434E9B2089CE6C002A4D7E /* ListViewModel.swift in Sources */,
 				0F434E9E2089CE8A002A4D7E /* ListItemViewController.swift in Sources */,
 				0F434E682089CD7B002A4D7E /* AppDelegate.swift in Sources */,
+				0F56C7CE209AAE6F00189804 /* ListItemWireframe.swift in Sources */,
 				0F434EAF2089DAAA002A4D7E /* CellConfigurationProtocol.swift in Sources */,
+				0F5767152099589200766E3C /* HomeViewController.swift in Sources */,
 				0F434EA32089CFE4002A4D7E /* NetworkLayerProtocol.swift in Sources */,
+				0F56C7CC209AAE5700189804 /* ListItemPresenter.swift in Sources */,
+				0F56C7D5209AB5A800189804 /* ListItemWireframeProtocol.swift in Sources */,
+				0F56C7D3209AB48C00189804 /* ListItemPresenterProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -509,7 +593,6 @@
 		0F434E8D2089CD7B002A4D7E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = DemoNetworkLayerApplication/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -523,7 +606,6 @@
 		0F434E8E2089CD7B002A4D7E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = DemoNetworkLayerApplication/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

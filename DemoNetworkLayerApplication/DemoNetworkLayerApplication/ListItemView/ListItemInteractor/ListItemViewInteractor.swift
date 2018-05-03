@@ -15,13 +15,13 @@ struct QueryItem{
 
 class ListItemViewInteractor{
     var list = [ListViewModel]()
-    weak var interactorDelegate: InteractorDelegate?
-    weak var listItemDelegate: ListItemInteractorDelegate?
+    weak var interactorDelegate: InteractorNetworkDelegate?
+    weak var listItemDelegate: InteractorListItemDelegate?
     var network: NetworkProtocol?
     //Load data from server
     func loadDataFromServer(urlSchema: Schema, urlHost: String, urlPath: String,query: [QueryItem]){
         network?.delegate = self
-        self.interactorDelegate = network as? InteractorDelegate
+        self.interactorDelegate = network as? InteractorNetworkDelegate
         network?.setUrlComponent(urlSchema: urlSchema, urlHost: urlHost, urlPath: urlPath)
         for item in query{
             network?.addQueryItem(keyItem: item.key, valueItem: item.value)
