@@ -25,7 +25,6 @@ enum RequestMethod:String{
     case PUT = "PUT"
 }
 
-//Older
 protocol  NetworkProtocol:class {
     var urlComponent: URLComponents? {get set}
     weak var delegate: NetworkLayerDelegate? {get set}

@@ -16,8 +16,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        let tabbarController = UITabBarController()
+        let listController = ListItemWireframe.createListItemModule()
+        let featureController = FeatureViewController()
+        let topChartController = TopChartViewController()
+        let searchController = SearchViewController()
+        let profileController = ProfileViewController()
         window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = ListItemViewController()
+        listController.tabBarItem = UITabBarItem(title: "Home", image: UIImage(named: "home"), tag: 1)
+        featureController.tabBarItem = UITabBarItem(title: "Features", image: UIImage(named: "list"), tag: 2)
+        topChartController.tabBarItem = UITabBarItem(title: "Charts", image: UIImage(named: "list"), tag: 3)
+        searchController.tabBarItem = UITabBarItem(title: "Search", image: UIImage(named: "list"), tag: 4)
+        profileController.tabBarItem = UITabBarItem(title: "Profile", image: UIImage(named: "list"), tag: 5)
+        tabbarController.viewControllers = [listController,featureController,topChartController,searchController,profileController]
+        window?.rootViewController = tabbarController
         window?.makeKeyAndVisible()
         return true
     }
