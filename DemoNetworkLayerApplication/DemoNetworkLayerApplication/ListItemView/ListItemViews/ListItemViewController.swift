@@ -57,6 +57,12 @@ extension ListItemViewController:UITableViewDataSource{
         item.configure(cell: cell)
         return cell
     }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        let item = listData!.data[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: type(of: item).reuseId)!
+        return CGFloat(item.setHeight(cell: cell))
+        
+    }
 
 }
 extension ListItemViewController:UITableViewDelegate{
