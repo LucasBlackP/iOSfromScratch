@@ -36,4 +36,7 @@ class ItemCell: UITableViewCell, ConfigurableCell {
         //TODO: later
         return nil
     }
+    func setHeight() -> Int {
+        return 120
+    }
 }

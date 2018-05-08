@@ -19,17 +19,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let tabbarController = UITabBarController()
         let listController = ListItemWireframe.createListItemModule()
-        let featureController = FeatureViewController()
         let topChartController = TopChartViewController()
         let searchController = SearchViewController()
-        let profileController = ProfileViewController()
+        let profileController = ProfileConfigurator.config()
         window = UIWindow(frame: UIScreen.main.bounds)
         listController.tabBarItem = UITabBarItem(title: "Home", image: UIImage(named: "home"), tag: 1)
-        featureController.tabBarItem = UITabBarItem(title: "Features", image: UIImage(named: "list"), tag: 2)
-        topChartController.tabBarItem = UITabBarItem(title: "Charts", image: UIImage(named: "list"), tag: 3)
-        searchController.tabBarItem = UITabBarItem(title: "Search", image: UIImage(named: "list"), tag: 4)
-        profileController.tabBarItem = UITabBarItem(title: "Profile", image: UIImage(named: "list"), tag: 5)
-        tabbarController.viewControllers = [listController,featureController,topChartController,searchController,profileController]
+        topChartController.tabBarItem = UITabBarItem(title: "Charts", image: UIImage(named: "chart"), tag: 2)
+        searchController.tabBarItem = UITabBarItem(title: "Search", image: UIImage(named: "search"), tag: 3)
+        profileController.tabBarItem = UITabBarItem(title: "Profile", image: UIImage(named: "profile"), tag: 4)
+        tabbarController.viewControllers = [listController,topChartController,searchController,profileController]
         window?.rootViewController = tabbarController
         window?.makeKeyAndVisible()
         return true

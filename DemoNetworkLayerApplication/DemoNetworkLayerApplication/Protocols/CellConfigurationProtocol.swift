@@ -13,12 +13,14 @@ protocol ConfigurableCell {
     associatedtype DataType
     func configure(data: DataType)
     func pushView(data: DataType)->UIViewController?
+    func setHeight()->Int
 }
 
 protocol CellConfigurator {
     static var reuseId: String { get }
     func configure(cell: UIView)
     func pushView()->UIViewController?
+    func setHeight(cell: UIView)->Int
 }
 
 class TableCellConfigurator<CellType: ConfigurableCell, DataType>: CellConfigurator where CellType.DataType == DataType, CellType: UITableViewCell {
@@ -33,5 +35,8 @@ class TableCellConfigurator<CellType: ConfigurableCell, DataType>: CellConfigura
     func pushView() -> UIViewController? {
         let b = CellType()
         return b.pushView(data: item)
+    }
+    func setHeight(cell: UIView) -> Int {
+        return (cell as! CellType).setHeight()
     }
 }
