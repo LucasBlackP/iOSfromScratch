@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_0" orientation="portrait">
+    <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -20,7 +20,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DVV-W6-pSg">
-                        <rect key="frame" x="16" y="11" width="95" height="21"/>
+                        <rect key="frame" x="16" y="9" width="95" height="21"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="95" id="PqR-bs-Aq1"/>
                         </constraints>
@@ -29,7 +29,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jzp-ki-16p">
-                        <rect key="frame" x="137" y="11" width="163" height="21"/>
+                        <rect key="frame" x="137" y="9" width="163" height="21"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="163" id="azE-3U-tGb"/>
                         </constraints>
@@ -41,8 +41,8 @@
                 <constraints>
                     <constraint firstItem="jzp-ki-16p" firstAttribute="leading" secondItem="DVV-W6-pSg" secondAttribute="trailing" constant="26" id="3RJ-3Y-2tq"/>
                     <constraint firstItem="DVV-W6-pSg" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="GCQ-yb-w7l"/>
-                    <constraint firstItem="jzp-ki-16p" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="11" id="jSj-Bj-AhQ"/>
-                    <constraint firstItem="DVV-W6-pSg" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="11" id="xmF-aC-9IL"/>
+                    <constraint firstItem="jzp-ki-16p" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="9" id="jSj-Bj-AhQ"/>
+                    <constraint firstItem="DVV-W6-pSg" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="9" id="xmF-aC-9IL"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

@@ -9,11 +9,13 @@
 import UIKit
 
 class WatchedVideoModel{
+    var videoImage: UIImage
     let dateWatched: String
     var videoTitle: String
     let videoLength: Double
-    init(dateWatched: String, videoTitle: String, videoLength: Double){
+    init(dateWatched: String, videoImage: UIImage, videoTitle: String, videoLength: Double){
         self.dateWatched = dateWatched
+        self.videoImage = videoImage
         self.videoTitle = videoTitle
         self.videoLength = videoLength
     }

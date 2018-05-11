@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let tabbarController = UITabBarController()
         let listController = ListItemWireframe.createListItemModule()
-        let topChartController = TopChartViewController()
+        let topChartController =  ProfileMVVMViewController()  //TopChartViewController()
         let searchController = SearchViewController()
         let profileController = ProfileConfigurator.config()
         window = UIWindow(frame: UIScreen.main.bounds)

@@ -32,6 +32,6 @@ class TitleDescriptionCell: UITableViewCell, ConfigurableCell {
         return nil
     }
     func setHeight() -> Int {
-        return 60
+        return 40
     }
 }

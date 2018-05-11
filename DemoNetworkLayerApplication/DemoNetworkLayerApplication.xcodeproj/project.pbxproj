@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F38761E20A2AD96008C5084 /* ProfileMVVMViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F38761C20A2AD96008C5084 /* ProfileMVVMViewController.swift */; };
+		0F38761F20A2AD96008C5084 /* ProfileMVVMViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F38761D20A2AD96008C5084 /* ProfileMVVMViewController.xib */; };
+		0F38762120A2ADB4008C5084 /* ProfileMVVMViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F38762020A2ADB4008C5084 /* ProfileMVVMViewModel.swift */; };
+		0F38762520A2AEE4008C5084 /* ProfileMVVMModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F38762420A2AEE4008C5084 /* ProfileMVVMModel.swift */; };
 		0F434E682089CD7B002A4D7E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F434E672089CD7B002A4D7E /* AppDelegate.swift */; };
 		0F434E722089CD7B002A4D7E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F434E702089CD7B002A4D7E /* LaunchScreen.storyboard */; };
 		0F434E7D2089CD7B002A4D7E /* DemoNetworkLayerApplicationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F434E7C2089CD7B002A4D7E /* DemoNetworkLayerApplicationTests.swift */; };
@@ -77,6 +81,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0F38761C20A2AD96008C5084 /* ProfileMVVMViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileMVVMViewController.swift; sourceTree = "<group>"; };
+		0F38761D20A2AD96008C5084 /* ProfileMVVMViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileMVVMViewController.xib; sourceTree = "<group>"; };
+		0F38762020A2ADB4008C5084 /* ProfileMVVMViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileMVVMViewModel.swift; sourceTree = "<group>"; };
+		0F38762420A2AEE4008C5084 /* ProfileMVVMModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileMVVMModel.swift; sourceTree = "<group>"; };
 		0F434E642089CD7B002A4D7E /* DemoNetworkLayerApplication.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoNetworkLayerApplication.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F434E672089CD7B002A4D7E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0F434E712089CD7B002A4D7E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -160,6 +168,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F38761B20A2AD3B008C5084 /* ProfileViewMVVM */ = {
+			isa = PBXGroup;
+			children = (
+				0F38761C20A2AD96008C5084 /* ProfileMVVMViewController.swift */,
+				0F38761D20A2AD96008C5084 /* ProfileMVVMViewController.xib */,
+				0F38762020A2ADB4008C5084 /* ProfileMVVMViewModel.swift */,
+				0F38762420A2AEE4008C5084 /* ProfileMVVMModel.swift */,
+			);
+			path = ProfileViewMVVM;
+			sourceTree = "<group>";
+		};
 		0F434E5B2089CD7B002A4D7E = {
 			isa = PBXGroup;
 			children = (
@@ -183,11 +202,12 @@
 		0F434E662089CD7B002A4D7E /* DemoNetworkLayerApplication */ = {
 			isa = PBXGroup;
 			children = (
+				0F56C7C4209AAC6500189804 /* ListItemView */,
+				0F56C7C5209AACA600189804 /* DetailView */,
 				0F5DDA5E20A1822B0038B80C /* TopChartView */,
 				0FF6BCEB209B1F02000BF71C /* SearchView */,
 				0F5DDA5D20A182090038B80C /* ProfileView */,
-				0F56C7C5209AACA600189804 /* DetailView */,
-				0F56C7C4209AAC6500189804 /* ListItemView */,
+				0F38761B20A2AD3B008C5084 /* ProfileViewMVVM */,
 				0F56C7CF209AAE9300189804 /* CustomCell */,
 				0F434EA62089D023002A4D7E /* Protocols */,
 				0F434E952089CD85002A4D7E /* NetworkLayer */,
@@ -593,6 +613,7 @@
 				0F5DDA5B20A17F1C0038B80C /* SearchViewController.xib in Resources */,
 				0F56C7DE209AE54400189804 /* ItemDetailViewController.xib in Resources */,
 				0F5DDA6A20A185A20038B80C /* TitleDescriptionCell.xib in Resources */,
+				0F38761F20A2AD96008C5084 /* ProfileMVVMViewController.xib in Resources */,
 				0FF6BCFB209B1FC9000BF71C /* ProfileViewController.xib in Resources */,
 				0FF6BCF3209B1F96000BF71C /* TopChartViewController.xib in Resources */,
 				0F5DDA6E20A186840038B80C /* UserAvatarCell.xib in Resources */,
@@ -624,10 +645,12 @@
 				0F5DDA6D20A186840038B80C /* UserAvatarCell.swift in Sources */,
 				0F5DDA7C20A1910C0038B80C /* ProfileInteractor.swift in Sources */,
 				0F434EA52089D012002A4D7E /* InteractorProtocol.swift in Sources */,
+				0F38761E20A2AD96008C5084 /* ProfileMVVMViewController.swift in Sources */,
 				0F434E992089CE22002A4D7E /* NetworkLayer.swift in Sources */,
 				0F5DDA5C20A17F1C0038B80C /* SearchViewController.swift in Sources */,
 				0F434EA82089D688002A4D7E /* ListItemControllerProtocol.swift in Sources */,
 				0F5DDA6920A185A20038B80C /* TitleDescriptionCell.swift in Sources */,
+				0F38762520A2AEE4008C5084 /* ProfileMVVMModel.swift in Sources */,
 				0F5DDA7E20A191330038B80C /* ProfileWireframe.swift in Sources */,
 				0F434EB12089DDDD002A4D7E /* TableViewModel.swift in Sources */,
 				0F5DDA7120A1890B0038B80C /* VideoHistoryCell.swift in Sources */,
@@ -639,6 +662,7 @@
 				0F5DDA8020A1915B0038B80C /* ProfileConfigurator.swift in Sources */,
 				0F56C7E4209AE59300189804 /* ItemDetailInteractorProtocol.swift in Sources */,
 				0F434E9B2089CE6C002A4D7E /* ListViewModel.swift in Sources */,
+				0F38762120A2ADB4008C5084 /* ProfileMVVMViewModel.swift in Sources */,
 				0F434E9E2089CE8A002A4D7E /* ListItemViewController.swift in Sources */,
 				0F434E682089CD7B002A4D7E /* AppDelegate.swift in Sources */,
 				0F56C7CE209AAE6F00189804 /* ListItemWireframe.swift in Sources */,

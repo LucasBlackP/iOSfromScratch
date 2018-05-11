@@ -16,6 +16,7 @@ class VideoHistoryCell: UITableViewCell, ConfigurableCell {
     @IBOutlet weak var labelDate: UILabel!
     @IBOutlet weak var labelTitle: UILabel!
     @IBOutlet weak var labelLength: UILabel!
+    @IBOutlet weak var imageVideo: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -31,6 +32,7 @@ class VideoHistoryCell: UITableViewCell, ConfigurableCell {
         self.labelDate.text = data.dateWatched
         self.labelTitle.text = data.videoTitle
         self.labelLength.text = String(data.videoLength)
+        self.imageVideo.image = data.videoImage
     }
     
     func pushView(data: WatchedVideoModel) -> UIViewController? {

@@ -69,6 +69,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="imageVideo" destination="7D7-f3-f6K" id="0XC-IH-iCr"/>
                 <outlet property="labelDate" destination="NRc-Gb-yWS" id="c4S-T3-WL3"/>
                 <outlet property="labelLength" destination="YKU-zf-Fhc" id="pdT-Ms-LNi"/>
                 <outlet property="labelTitle" destination="BMS-8t-3sQ" id="J3d-YA-5xi"/>
