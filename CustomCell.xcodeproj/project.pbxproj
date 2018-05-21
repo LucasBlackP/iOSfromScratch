@@ -41,6 +41,14 @@
 		0F5CF3CC2085A09500CD003F /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5CF3CB2085A09500CD003F /* ListViewModel.swift */; };
 		0F5CF3CE2085A86100CD003F /* DetailViewInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5CF3CD2085A86100CD003F /* DetailViewInteractor.swift */; };
 		0F5CF3D02085ACC700CD003F /* TableDelegateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5CF3CF2085ACC700CD003F /* TableDelegateModel.swift */; };
+		1FF839A820AC198500127D68 /* LoginContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF839A720AC198500127D68 /* LoginContainer.swift */; };
+		1FF839AA20AC1AB100127D68 /* PostLoginFailurePlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF839A920AC1AB100127D68 /* PostLoginFailurePlugin.swift */; };
+		1FF839AC20AC1ADE00127D68 /* PostLoginSuccessPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF839AB20AC1ADE00127D68 /* PostLoginSuccessPlugin.swift */; };
+		1FF839AE20AC1B5100127D68 /* Authenticator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF839AD20AC1B5100127D68 /* Authenticator.swift */; };
+		1FF839B120AC365100127D68 /* UserProfilePostLoginPluginImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF839B020AC365100127D68 /* UserProfilePostLoginPluginImpl.swift */; };
+		1FF839B320AC399A00127D68 /* UserFeedPostLoginPluginImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF839B220AC399A00127D68 /* UserFeedPostLoginPluginImpl.swift */; };
+		1FF839B620AC461400127D68 /* FirstLaunch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF839B520AC461400127D68 /* FirstLaunch.swift */; };
+		1FF839B920AC49EE00127D68 /* UserCacher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF839B820AC49EE00127D68 /* UserCacher.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,6 +109,14 @@
 		0F5CF3CB2085A09500CD003F /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
 		0F5CF3CD2085A86100CD003F /* DetailViewInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewInteractor.swift; sourceTree = "<group>"; };
 		0F5CF3CF2085ACC700CD003F /* TableDelegateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableDelegateModel.swift; sourceTree = "<group>"; };
+		1FF839A720AC198500127D68 /* LoginContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginContainer.swift; sourceTree = "<group>"; };
+		1FF839A920AC1AB100127D68 /* PostLoginFailurePlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostLoginFailurePlugin.swift; sourceTree = "<group>"; };
+		1FF839AB20AC1ADE00127D68 /* PostLoginSuccessPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostLoginSuccessPlugin.swift; sourceTree = "<group>"; };
+		1FF839AD20AC1B5100127D68 /* Authenticator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authenticator.swift; sourceTree = "<group>"; };
+		1FF839B020AC365100127D68 /* UserProfilePostLoginPluginImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfilePostLoginPluginImpl.swift; sourceTree = "<group>"; };
+		1FF839B220AC399A00127D68 /* UserFeedPostLoginPluginImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFeedPostLoginPluginImpl.swift; sourceTree = "<group>"; };
+		1FF839B520AC461400127D68 /* FirstLaunch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstLaunch.swift; sourceTree = "<group>"; };
+		1FF839B820AC49EE00127D68 /* UserCacher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCacher.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +178,10 @@
 		0F563AFB207DB168005B365E /* CustomCell */ = {
 			isa = PBXGroup;
 			children = (
+				1FF839B720AC498E00127D68 /* Simple_DI */,
+				1FF839B420AC3D6200127D68 /* DetectTheFirstLauch */,
+				1FF839AF20AC35B500127D68 /* Ex_plugin_Impl */,
+				1FF839A620AC196300127D68 /* Login_Plugin */,
 				0F29AF7E2080A63300F41214 /* View Controller */,
 				0F563B46207DE2A4005B365E /* Model */,
 				0F563B45207DE27C005B365E /* TableViewController */,
@@ -252,6 +272,42 @@
 				0F563B39207DE15F005B365E /* DetailTableViewController.xib */,
 			);
 			path = DetailView;
+			sourceTree = "<group>";
+		};
+		1FF839A620AC196300127D68 /* Login_Plugin */ = {
+			isa = PBXGroup;
+			children = (
+				1FF839A720AC198500127D68 /* LoginContainer.swift */,
+				1FF839A920AC1AB100127D68 /* PostLoginFailurePlugin.swift */,
+				1FF839AB20AC1ADE00127D68 /* PostLoginSuccessPlugin.swift */,
+				1FF839AD20AC1B5100127D68 /* Authenticator.swift */,
+			);
+			path = Login_Plugin;
+			sourceTree = "<group>";
+		};
+		1FF839AF20AC35B500127D68 /* Ex_plugin_Impl */ = {
+			isa = PBXGroup;
+			children = (
+				1FF839B020AC365100127D68 /* UserProfilePostLoginPluginImpl.swift */,
+				1FF839B220AC399A00127D68 /* UserFeedPostLoginPluginImpl.swift */,
+			);
+			path = Ex_plugin_Impl;
+			sourceTree = "<group>";
+		};
+		1FF839B420AC3D6200127D68 /* DetectTheFirstLauch */ = {
+			isa = PBXGroup;
+			children = (
+				1FF839B520AC461400127D68 /* FirstLaunch.swift */,
+			);
+			path = DetectTheFirstLauch;
+			sourceTree = "<group>";
+		};
+		1FF839B720AC498E00127D68 /* Simple_DI */ = {
+			isa = PBXGroup;
+			children = (
+				1FF839B820AC49EE00127D68 /* UserCacher.swift */,
+			);
+			path = Simple_DI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -397,11 +453,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FF839B120AC365100127D68 /* UserProfilePostLoginPluginImpl.swift in Sources */,
 				0F563B3A207DE15F005B365E /* DetailTableViewController.swift in Sources */,
 				0F563B4B207DF1D1005B365E /* DetailCell.swift in Sources */,
+				1FF839B320AC399A00127D68 /* UserFeedPostLoginPluginImpl.swift in Sources */,
 				0F563B42207DE214005B365E /* IngredientCell.swift in Sources */,
 				0F29AF812080A64E00F41214 /* EditPhotoController.swift in Sources */,
+				1FF839B620AC461400127D68 /* FirstLaunch.swift in Sources */,
 				0F28CC22207F39E50078943C /* ViewController.swift in Sources */,
+				1FF839B920AC49EE00127D68 /* UserCacher.swift in Sources */,
 				0F28CC1F207EF94D0078943C /* TableDataModel.swift in Sources */,
 				0F563B52207E2021005B365E /* CellConfigure.swift in Sources */,
 				0F29AF892080B82E00F41214 /* DescriptionDelegateModel.swift in Sources */,
@@ -414,8 +474,12 @@
 				0F5CF3CC2085A09500CD003F /* ListViewModel.swift in Sources */,
 				0F563B48207DE7C7005B365E /* MealDataModel.swift in Sources */,
 				0F563AFD207DB168005B365E /* AppDelegate.swift in Sources */,
+				1FF839AE20AC1B5100127D68 /* Authenticator.swift in Sources */,
+				1FF839AA20AC1AB100127D68 /* PostLoginFailurePlugin.swift in Sources */,
+				1FF839AC20AC1ADE00127D68 /* PostLoginSuccessPlugin.swift in Sources */,
 				0F5CF3CA2085910D00CD003F /* ListViewInteractor.swift in Sources */,
 				0F563B2C207DB33E005B365E /* MealCell.swift in Sources */,
+				1FF839A820AC198500127D68 /* LoginContainer.swift in Sources */,
 				0F563B32207DB3E8005B365E /* MealTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

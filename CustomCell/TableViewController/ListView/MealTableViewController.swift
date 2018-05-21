@@ -26,6 +26,17 @@ class MealTableViewController: UIViewController, UITableViewDelegate, UITableVie
         // Do any additional setup after loading the view.
         //Configure Views - Interactor
         configVI()
+        
+        testCallPlugin()
+    }
+    //MARK: - Test call using plugin
+    
+    func testCallPlugin() {
+        let authenticator = Authenticator()
+        
+        LoginContainer.shareInstance.register(plugin: PostLoginSuccessPlugin.self, with: UserProfilePostLoginPluginImpl())
+        
+        authenticator.authenticateSuccessfully()
     }
     
     //UITableViewDataSource
