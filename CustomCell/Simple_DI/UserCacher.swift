@@ -31,29 +31,29 @@ protocol ErrorReporterProtocol {
 
 
 class UserCache {
-    let userDownloader: UserDownloader
-    let cache: Caching
-    let errorReporter: ErrorReporterProtocol
-    
-    init(userDownloader: UserDownloader, cache: Caching, errorReporter: ErrorReporterProtocol) {
-        self.userDownloader = userDownloader
-        self.cache = cache
-        self.errorReporter = errorReporter
-    }
-    
-    func cacheUser(withID id: Int) {
-        userDownloader.downloadUser(withID: id) { (result) in
-            switch result {
-            case .success(let user):
-                do {
-                    let serializedUser = try user.asData()
-                    self.cache.cache(serializedUser, at: "user-\(id)")
-                } catch {
-                    self.errorReporter.report(error)
-                }
-            case .failure(let error):
-                self.errorReporter.report(error)
-            }
-        }
-    }
+//    let userDownloader: UserDownloader
+//    let cache: Caching
+//    let errorReporter: ErrorReporterProtocol
+//    
+//    init(userDownloader: UserDownloader, cache: Caching, errorReporter: ErrorReporterProtocol) {
+//        self.userDownloader = userDownloader
+//        self.cache = cache
+//        self.errorReporter = errorReporter
+//    }
+//    
+//    func cacheUser(withID id: Int) {
+//        userDownloader.downloadUser(withID: id) { (result) in
+//            switch result {
+//            case .success(let user):
+//                do {
+//                    let serializedUser = try user.asData()
+//                    self.cache.cache(serializedUser, at: "user-\(id)")
+//                } catch {
+//                    self.errorReporter.report(error)
+//                }
+//            case .failure(let error):
+//                self.errorReporter.report(error)
+//            }
+//        }
+//    }
 }
