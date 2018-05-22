@@ -14,7 +14,8 @@ enum Result<Value> {
 }
 
 class User {
-    
+    func asData() {
+    }
 }
 
 protocol UserDownloader {
@@ -42,18 +43,18 @@ class UserCache {
     }
     
     func cacheUser(withID id: Int) {
-        userDownloader.downloadUser(withID: id) { (result) in
-            switch result {
-            case .success(let user):
-                do {
-                    let serializedUser = try user.asData()
-                    self.cache.cache(serializedUser, at: "user-\(id)")
-                } catch {
-                    self.errorReporter.report(error)
-                }
-            case .failure(let error):
-                self.errorReporter.report(error)
-            }
-        }
+//        userDownloader.downloadUser(withID: id) { (result) in
+//            switch result {
+//            case .success(let user):
+//                do {
+//                    let serializedUser = try user.asData()
+//                    self.cache.cache(serializedUser, at: "user-\(id)")
+//                } catch {
+//                    self.errorReporter.report(error)
+//                }
+//            case .failure(let error):
+//                self.errorReporter.report(error)
+//            }
+//        }
     }
 }

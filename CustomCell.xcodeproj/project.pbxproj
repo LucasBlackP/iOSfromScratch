@@ -49,6 +49,7 @@
 		1FF839B320AC399A00127D68 /* UserFeedPostLoginPluginImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF839B220AC399A00127D68 /* UserFeedPostLoginPluginImpl.swift */; };
 		1FF839B620AC461400127D68 /* FirstLaunch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF839B520AC461400127D68 /* FirstLaunch.swift */; };
 		1FF839B920AC49EE00127D68 /* UserCacher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF839B820AC49EE00127D68 /* UserCacher.swift */; };
+		F39E22C020B42442007DBA03 /* Identifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39E22BF20B42442007DBA03 /* Identifier.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -117,6 +118,7 @@
 		1FF839B220AC399A00127D68 /* UserFeedPostLoginPluginImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFeedPostLoginPluginImpl.swift; sourceTree = "<group>"; };
 		1FF839B520AC461400127D68 /* FirstLaunch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstLaunch.swift; sourceTree = "<group>"; };
 		1FF839B820AC49EE00127D68 /* UserCacher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCacher.swift; sourceTree = "<group>"; };
+		F39E22BF20B42442007DBA03 /* Identifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Identifier.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +160,7 @@
 		0F563AF0207DB168005B365E = {
 			isa = PBXGroup;
 			children = (
+				F39E22BE20B42386007DBA03 /* IdentifyingObject */,
 				0F563AFB207DB168005B365E /* CustomCell */,
 				0F563B10207DB168005B365E /* CustomCellTests */,
 				0F563B1B207DB168005B365E /* CustomCellUITests */,
@@ -308,6 +311,14 @@
 				1FF839B820AC49EE00127D68 /* UserCacher.swift */,
 			);
 			path = Simple_DI;
+			sourceTree = "<group>";
+		};
+		F39E22BE20B42386007DBA03 /* IdentifyingObject */ = {
+			isa = PBXGroup;
+			children = (
+				F39E22BF20B42442007DBA03 /* Identifier.swift */,
+			);
+			path = IdentifyingObject;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -467,6 +478,7 @@
 				0F29AF892080B82E00F41214 /* DescriptionDelegateModel.swift in Sources */,
 				0F29AF852080A6EA00F41214 /* EditDescriptionController.swift in Sources */,
 				0F563B35207DB97D005B365E /* MealModel.swift in Sources */,
+				F39E22C020B42442007DBA03 /* Identifier.swift in Sources */,
 				0F563B4F207DF1ED005B365E /* AuthorCell.swift in Sources */,
 				0F5CF3D02085ACC700CD003F /* TableDelegateModel.swift in Sources */,
 				0F5CF3CE2085A86100CD003F /* DetailViewInteractor.swift in Sources */,
