@@ -49,6 +49,7 @@
 		1FF839B320AC399A00127D68 /* UserFeedPostLoginPluginImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF839B220AC399A00127D68 /* UserFeedPostLoginPluginImpl.swift */; };
 		1FF839B620AC461400127D68 /* FirstLaunch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF839B520AC461400127D68 /* FirstLaunch.swift */; };
 		1FF839B920AC49EE00127D68 /* UserCacher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF839B820AC49EE00127D68 /* UserCacher.swift */; };
+		F314AB9320B513C500A5E4CA /* FileImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F314AB9220B513C500A5E4CA /* FileImporter.swift */; };
 		F39E22C020B42442007DBA03 /* Identifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39E22BF20B42442007DBA03 /* Identifier.swift */; };
 /* End PBXBuildFile section */
 
@@ -118,6 +119,7 @@
 		1FF839B220AC399A00127D68 /* UserFeedPostLoginPluginImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFeedPostLoginPluginImpl.swift; sourceTree = "<group>"; };
 		1FF839B520AC461400127D68 /* FirstLaunch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstLaunch.swift; sourceTree = "<group>"; };
 		1FF839B820AC49EE00127D68 /* UserCacher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCacher.swift; sourceTree = "<group>"; };
+		F314AB9220B513C500A5E4CA /* FileImporter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileImporter.swift; sourceTree = "<group>"; };
 		F39E22BF20B42442007DBA03 /* Identifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Identifier.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -160,6 +162,7 @@
 		0F563AF0207DB168005B365E = {
 			isa = PBXGroup;
 			children = (
+				F314AB9120B5137F00A5E4CA /* DelegationWithClosure */,
 				F39E22BE20B42386007DBA03 /* IdentifyingObject */,
 				0F563AFB207DB168005B365E /* CustomCell */,
 				0F563B10207DB168005B365E /* CustomCellTests */,
@@ -311,6 +314,14 @@
 				1FF839B820AC49EE00127D68 /* UserCacher.swift */,
 			);
 			path = Simple_DI;
+			sourceTree = "<group>";
+		};
+		F314AB9120B5137F00A5E4CA /* DelegationWithClosure */ = {
+			isa = PBXGroup;
+			children = (
+				F314AB9220B513C500A5E4CA /* FileImporter.swift */,
+			);
+			path = DelegationWithClosure;
 			sourceTree = "<group>";
 		};
 		F39E22BE20B42386007DBA03 /* IdentifyingObject */ = {
@@ -475,6 +486,7 @@
 				1FF839B920AC49EE00127D68 /* UserCacher.swift in Sources */,
 				0F28CC1F207EF94D0078943C /* TableDataModel.swift in Sources */,
 				0F563B52207E2021005B365E /* CellConfigure.swift in Sources */,
+				F314AB9320B513C500A5E4CA /* FileImporter.swift in Sources */,
 				0F29AF892080B82E00F41214 /* DescriptionDelegateModel.swift in Sources */,
 				0F29AF852080A6EA00F41214 /* EditDescriptionController.swift in Sources */,
 				0F563B35207DB97D005B365E /* MealModel.swift in Sources */,
