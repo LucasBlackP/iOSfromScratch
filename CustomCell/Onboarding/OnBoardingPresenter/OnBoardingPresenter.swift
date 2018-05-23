@@ -16,6 +16,9 @@ protocol OnBoardingPresenterProtocol: class{
     func numberOfPage()->Int
     func loadData()
     func firstPage()->PageContentViewProtocol?
+    func lastPage()->PageContentViewProtocol?
+    func presentViewController(_ viewControllerToPresent: UIViewController)
+    func displayMainScreen()
 }
 
 class OnBoardingPresenter: OnBoardingPresenterProtocol{
@@ -40,7 +43,17 @@ class OnBoardingPresenter: OnBoardingPresenterProtocol{
     func firstPage() -> PageContentViewProtocol? {
         return self.interactor?.firstPage()
     }
-    
+    func lastPage() -> PageContentViewProtocol? {
+        return self.interactor?.lastPage()
+    }
+    func presentViewController(_ viewControllerToPresent: UIViewController) {
+        TranslateAnimation.addTranslateAnimation(addTo: self.controller as! UIViewController, .right, 0.3)
+        (self.controller as! UIViewController).present(viewControllerToPresent, animated: false, completion: nil)
+    }
+    func displayMainScreen() {
+        let mainScreen = self.interactor?.loadMainScreen()
+        presentViewController(mainScreen!)
+    }
 }
 
 

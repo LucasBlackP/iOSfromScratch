@@ -17,6 +17,8 @@ protocol OnBoardingInteractorProtocol: class{
     func loadData()
     func numberOfPage()->Int
     func firstPage()->PageContentViewProtocol?
+    func lastPage()->PageContentViewProtocol?
+    func loadMainScreen()->UIViewController
 }
 
 class OnBoardingInteractor: OnBoardingInteractorProtocol{
@@ -42,19 +44,20 @@ class OnBoardingInteractor: OnBoardingInteractorProtocol{
         if (index < 0 || index > numberOfPage ){
             return nil
         }
+        if index == numberOfPage-1{
+            return nil
+        }
         return self.pagesContent[(index + 1) % numberOfPage]
     }
     func loadPreviousPageContent(index: Int) -> PageContentViewProtocol? {
         let numberOfPage = self.pagesContent.count
-        print("\(index)")
-        print(pagesContent)
         if (index < 0 || index >= numberOfPage ){
             return nil
         }
-        if index == 0{
-            return self.pagesContent[numberOfPage-1]
+        if index == 0 {
+            return nil
         }
-        return self.pagesContent[(index - 1)]
+        return self.pagesContent[index - 1]
     }
     func numberOfPage() -> Int {
         return self.pagesContent.count
@@ -62,4 +65,12 @@ class OnBoardingInteractor: OnBoardingInteractorProtocol{
     func firstPage() -> PageContentViewProtocol? {
         return self.pagesContent[0]
     }
+    func lastPage() -> PageContentViewProtocol? {
+        return self.pagesContent[pagesContent.count-1]
+    }
+    func loadMainScreen() -> UIViewController {
+        let nav = UINavigationController(rootViewController: MealTableViewController())
+        return nav
+    }
+    
 }

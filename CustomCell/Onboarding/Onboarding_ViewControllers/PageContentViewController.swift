@@ -43,6 +43,5 @@ class PageContentViewController: UIViewController, PageContentViewProtocol {
         self.lbTitle.font = UIFont.boldSystemFont(ofSize: 20)
         self.lbDescription.text = contentData.description
     }
-    
 }
 

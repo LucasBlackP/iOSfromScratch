@@ -53,6 +53,7 @@
 		0F641A0D20B4196400AD10EF /* OnBoardingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F641A0C20B4196400AD10EF /* OnBoardingPresenter.swift */; };
 		0F641A0F20B41A0D00AD10EF /* OnBoardingInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F641A0E20B41A0D00AD10EF /* OnBoardingInteractor.swift */; };
 		0F641A1220B4224800AD10EF /* OnBoardingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F641A1120B4224800AD10EF /* OnBoardingRouter.swift */; };
+		0FF7997820B561BD001A7C53 /* TranslateAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF7997720B561BD001A7C53 /* TranslateAnimation.swift */; };
 		1FF839A820AC198500127D68 /* LoginContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF839A720AC198500127D68 /* LoginContainer.swift */; };
 		1FF839AA20AC1AB100127D68 /* PostLoginFailurePlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF839A920AC1AB100127D68 /* PostLoginFailurePlugin.swift */; };
 		1FF839AC20AC1ADE00127D68 /* PostLoginSuccessPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF839AB20AC1ADE00127D68 /* PostLoginSuccessPlugin.swift */; };
@@ -133,6 +134,7 @@
 		0F641A0C20B4196400AD10EF /* OnBoardingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingPresenter.swift; sourceTree = "<group>"; };
 		0F641A0E20B41A0D00AD10EF /* OnBoardingInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingInteractor.swift; sourceTree = "<group>"; };
 		0F641A1120B4224800AD10EF /* OnBoardingRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingRouter.swift; sourceTree = "<group>"; };
+		0FF7997720B561BD001A7C53 /* TranslateAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateAnimation.swift; sourceTree = "<group>"; };
 		1FF839A720AC198500127D68 /* LoginContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginContainer.swift; sourceTree = "<group>"; };
 		1FF839A920AC1AB100127D68 /* PostLoginFailurePlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostLoginFailurePlugin.swift; sourceTree = "<group>"; };
 		1FF839AB20AC1ADE00127D68 /* PostLoginSuccessPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostLoginSuccessPlugin.swift; sourceTree = "<group>"; };
@@ -302,6 +304,7 @@
 		0F6419ED20B3B98800AD10EF /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
+				0FF7997920B561C9001A7C53 /* Animation */,
 				0F641A1020B4223600AD10EF /* OnBoardingRouter */,
 				0F641A0B20B418C400AD10EF /* OnBoardingInteractor */,
 				0F641A0A20B4188F00AD10EF /* OnBoardingPresenter */,
@@ -356,6 +359,14 @@
 				0F641A1120B4224800AD10EF /* OnBoardingRouter.swift */,
 			);
 			path = OnBoardingRouter;
+			sourceTree = "<group>";
+		};
+		0FF7997920B561C9001A7C53 /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+				0FF7997720B561BD001A7C53 /* TranslateAnimation.swift */,
+			);
+			path = Animation;
 			sourceTree = "<group>";
 		};
 		1FF839A620AC196300127D68 /* Login_Plugin */ = {
@@ -572,6 +583,7 @@
 				1FF839AE20AC1B5100127D68 /* Authenticator.swift in Sources */,
 				1FF839AA20AC1AB100127D68 /* PostLoginFailurePlugin.swift in Sources */,
 				0F641A0F20B41A0D00AD10EF /* OnBoardingInteractor.swift in Sources */,
+				0FF7997820B561BD001A7C53 /* TranslateAnimation.swift in Sources */,
 				1FF839AC20AC1ADE00127D68 /* PostLoginSuccessPlugin.swift in Sources */,
 				0F5CF3CA2085910D00CD003F /* ListViewInteractor.swift in Sources */,
 				0F563B2C207DB33E005B365E /* MealCell.swift in Sources */,

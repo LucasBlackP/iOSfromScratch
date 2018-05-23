@@ -12,7 +12,13 @@ class EditPhotoController: UIViewController {
 
     //MARK: Properties
     @IBOutlet weak var btnChangePhoto: UIButton!
-    @IBOutlet weak var photo: UIImageView!
+    @IBOutlet weak var photo: UIImageView!{
+        didSet{
+            photo.clipsToBounds = true
+            photo.layer.masksToBounds = true
+            photo.layer.cornerRadius = photo.bounds.height/2.0
+        }
+    }
     var image:UIImage?
     override func viewDidLoad() {
         super.viewDidLoad()

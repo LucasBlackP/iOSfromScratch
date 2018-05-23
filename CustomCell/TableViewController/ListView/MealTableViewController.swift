@@ -80,7 +80,19 @@ class MealTableViewController: UIViewController, UITableViewDelegate, UITableVie
     func reloadData() {
         self.tableView.reloadData()
     }
+    //METHODS:
     
+    @IBAction func backToPrevious(_ sender: UISwipeGestureRecognizer) {
+        if sender.direction == .right{
+            switch sender.state{
+            case .ended:
+                TranslateAnimation.addTranslateAnimation(addTo: self, .left, 0.3)
+                self.dismiss(animated: false, completion: nil)
+            default:
+                break;
+            }
+        }
+    }
 }
 
 extension MealTableViewController{
@@ -88,7 +100,7 @@ extension MealTableViewController{
         let nibCell = UINib.init(nibName: "MealCell", bundle: nil)
         tableView.register(nibCell, forCellReuseIdentifier: "MealCell")
     }
-    func configVI(    ){
+    func configVI(){
         self.listViewDelegate = interactor
         self.interactor.tableViewControllerDelegate = self
         self.tableDataSource = self.listViewDelegate?.initData()
