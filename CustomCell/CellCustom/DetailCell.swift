@@ -11,16 +11,21 @@ import UIKit
 class DetailCell: UITableViewCell ,ConfigurableCell{
     
     typealias DataType = Meal
-    @IBOutlet weak var photo: UIImageView!
-    @IBOutlet weak var name: UILabel!
+    @IBOutlet weak var photo: UIImageView!{
+        didSet{
+            self.photo.layer.masksToBounds = true
+            self.photo.layer.cornerRadius = photo.frame.height/2.0
+            self.photo.clipsToBounds = true
+        }
+    }
+    @IBOutlet weak var name: UILabel!{
+        didSet{
+            self.name.font = UIFont.boldSystemFont(ofSize: 18)
+        }
+    }
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        self.name.font = UIFont.boldSystemFont(ofSize: 18)
-        self.photo.layer.masksToBounds = true
-        self.photo.layer.cornerRadius = photo.frame.height/2.0
-        print("\(photo.frame.height)")
-        self.photo.clipsToBounds = true
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

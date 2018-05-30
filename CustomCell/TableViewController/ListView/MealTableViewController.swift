@@ -80,7 +80,6 @@ class MealTableViewController: UIViewController, UITableViewDelegate, UITableVie
     func reloadData() {
         self.tableView.reloadData()
     }
-    
 }
 
 extension MealTableViewController{
@@ -88,7 +87,7 @@ extension MealTableViewController{
         let nibCell = UINib.init(nibName: "MealCell", bundle: nil)
         tableView.register(nibCell, forCellReuseIdentifier: "MealCell")
     }
-    func configVI(    ){
+    func configVI(){
         self.listViewDelegate = interactor
         self.interactor.tableViewControllerDelegate = self
         self.tableDataSource = self.listViewDelegate?.initData()

@@ -27,8 +27,6 @@ class DetailTableViewController: UIViewController,UITableViewDelegate,UITableVie
         super.viewDidLoad()
         //Configure Views - Interactor
         configVI()
-        
-        
     }
     
     //UITableViewDelegate
