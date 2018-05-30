@@ -24,6 +24,6 @@ class TranslateAnimation{
         case .right:
             transition.subtype = kCATransitionFromRight
         }
-        viewController.view.window!.layer.add(transition, forKey: kCATransition)
+        viewController.view.layer.add(transition, forKey: kCATransition)
     }
 }

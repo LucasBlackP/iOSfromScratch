@@ -19,9 +19,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
 //        let navController = UINavigationController(rootViewController: MealTableViewController())
 //        window?.rootViewController = navController
-        let getStartedViewController = GetStartedViewController()
+//        let getStartedViewController = GetStartedViewController()
 //        let nav = UINavigationController(rootViewController: getStartedViewController)
-        window?.rootViewController = getStartedViewController
+        window?.rootViewController = MasterScrollRouter.configureVIPER()
         window?.makeKeyAndVisible()
         return true
     }

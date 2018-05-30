@@ -19,4 +19,13 @@ struct PageContentModel{
     }
 }
 
+protocol ScrollPageContentProtocol: class {
+    func config(contentModel: PageContentModel?)
+}
+
+protocol ScrollPageViewControllerProtocol: class{
+    func nextPage()->Bool
+}
+
+
 

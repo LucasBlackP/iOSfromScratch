@@ -80,19 +80,6 @@ class MealTableViewController: UIViewController, UITableViewDelegate, UITableVie
     func reloadData() {
         self.tableView.reloadData()
     }
-    //METHODS:
-    
-    @IBAction func backToPrevious(_ sender: UISwipeGestureRecognizer) {
-        if sender.direction == .right{
-            switch sender.state{
-            case .ended:
-                TranslateAnimation.addTranslateAnimation(addTo: self, .left, 0.3)
-                self.dismiss(animated: false, completion: nil)
-            default:
-                break;
-            }
-        }
-    }
 }
 
 extension MealTableViewController{

@@ -35,15 +35,7 @@
                 <constraint firstItem="mHD-i9-AR3" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="Hsc-mR-b3Q"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <connections>
-                <outletCollection property="gestureRecognizers" destination="WOS-JK-0u1" appends="YES" id="fIw-rI-LoN"/>
-            </connections>
             <point key="canvasLocation" x="26.5" y="51.5"/>
         </view>
-        <swipeGestureRecognizer direction="right" id="WOS-JK-0u1">
-            <connections>
-                <action selector="backToPrevious:" destination="-1" id="FnZ-XD-Jd6"/>
-            </connections>
-        </swipeGestureRecognizer>
     </objects>
 </document>

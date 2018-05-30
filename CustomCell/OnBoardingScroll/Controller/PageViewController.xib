@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PageViewController" customModule="CustomCell" customModuleProvider="target">
+            <connections>
+                <outlet property="image" destination="Wuv-le-dki" id="E9s-Sf-4e6"/>
+                <outlet property="lbTitle" destination="f8A-6V-5Qt" id="3S0-eY-RwU"/>
+                <outlet property="txtDescription" destination="2hj-dw-ru8" id="CdR-db-MlX"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Wuv-le-dki">
+                    <rect key="frame" x="60" y="100" width="199" height="199"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="Wuv-le-dki" secondAttribute="height" multiplier="1:1" id="ub3-Yr-uk7"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f8A-6V-5Qt">
+                    <rect key="frame" x="60" y="316" width="199" height="16.5"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="f8A-6V-5Qt" secondAttribute="height" multiplier="254:21" id="M38-gh-acN"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="2hj-dw-ru8">
+                    <rect key="frame" x="60" y="340.5" width="199" height="83"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="2hj-dw-ru8" secondAttribute="height" multiplier="127:53" id="cUi-3o-Jid"/>
+                    </constraints>
+                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Wuv-le-dki" secondAttribute="trailing" constant="61" id="Lwu-Cd-NLh"/>
+                <constraint firstItem="2hj-dw-ru8" firstAttribute="top" secondItem="f8A-6V-5Qt" secondAttribute="bottom" constant="8" id="MC3-sg-EFc"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="2hj-dw-ru8" secondAttribute="trailing" constant="61" id="QlW-FD-p11"/>
+                <constraint firstItem="Wuv-le-dki" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="80" id="VGd-Tv-emS"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="f8A-6V-5Qt" secondAttribute="trailing" constant="61" id="YsC-Ll-Hj9"/>
+                <constraint firstItem="f8A-6V-5Qt" firstAttribute="top" secondItem="Wuv-le-dki" secondAttribute="bottom" constant="17" id="cWn-dy-6hg"/>
+                <constraint firstItem="Wuv-le-dki" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="60" id="jVG-OD-591"/>
+                <constraint firstItem="f8A-6V-5Qt" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="60" id="lBm-VU-LGt"/>
+                <constraint firstItem="2hj-dw-ru8" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="60" id="qf1-MV-Xnf"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="24.5" y="51.5"/>
+        </view>
+    </objects>
+</document>
