@@ -162,6 +162,7 @@
 		0F563AF0207DB168005B365E = {
 			isa = PBXGroup;
 			children = (
+				F3AD25AD20B6BE5400F930EE /* PluginWithSDK */,
 				F314AB9120B5137F00A5E4CA /* DelegationWithClosure */,
 				F39E22BE20B42386007DBA03 /* IdentifyingObject */,
 				0F563AFB207DB168005B365E /* CustomCell */,
@@ -330,6 +331,13 @@
 				F39E22BF20B42442007DBA03 /* Identifier.swift */,
 			);
 			path = IdentifyingObject;
+			sourceTree = "<group>";
+		};
+		F3AD25AD20B6BE5400F930EE /* PluginWithSDK */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = PluginWithSDK;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
