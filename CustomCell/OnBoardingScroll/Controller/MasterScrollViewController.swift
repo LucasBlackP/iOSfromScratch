@@ -40,7 +40,8 @@ class MasterScrollViewController: UIViewController, MasterScrollViewProtocol {
     }
     var deltaDistance = 0.0
     var oldDistanceValue = 0.0
-    //MARK: Methods
+    //MARK: Lifecycler
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -59,6 +60,8 @@ class MasterScrollViewController: UIViewController, MasterScrollViewProtocol {
         view.bringSubview(toFront: btnNext)
         masterScrollView.delegate = self
     }
+    
+    //MARK: Logic
     func loadPageContent(){
         pages = presenter?.loadOnBoardingPages()
         guard let pageContents = pages else{

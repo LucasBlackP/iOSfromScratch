@@ -15,7 +15,7 @@ class PageViewController: UIViewController, ScrollPageContentProtocol {
         didSet{
             image.clipsToBounds = true
             image.layer.masksToBounds = true
-            image.layer.cornerRadius = image.frame.height/2.0
+           // image.layer.cornerRadius = image.frame.size.height/2.0
         }
     }
     @IBOutlet weak var lbTitle: UILabel!
@@ -29,6 +29,10 @@ class PageViewController: UIViewController, ScrollPageContentProtocol {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
        
+    }
+    
+    override func viewDidLayoutSubviews() {
+        self.image.layer.cornerRadius = self.image.frame.size.width/2.0
     }
 
     override func didReceiveMemoryWarning() {
