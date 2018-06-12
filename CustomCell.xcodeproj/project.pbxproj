@@ -67,6 +67,8 @@
 		1FF839B320AC399A00127D68 /* UserFeedPostLoginPluginImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF839B220AC399A00127D68 /* UserFeedPostLoginPluginImpl.swift */; };
 		1FF839B620AC461400127D68 /* FirstLaunch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF839B520AC461400127D68 /* FirstLaunch.swift */; };
 		1FF839B920AC49EE00127D68 /* UserCacher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF839B820AC49EE00127D68 /* UserCacher.swift */; };
+		F3EAFC5820CBDFB200F7AE86 /* AudioPlayerObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3EAFC5720CBDFB200F7AE86 /* AudioPlayerObserver.swift */; };
+		F3EAFC5A20CBE4BA00F7AE86 /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3EAFC5920CBE4BA00F7AE86 /* AudioPlayer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -153,6 +155,8 @@
 		1FF839B220AC399A00127D68 /* UserFeedPostLoginPluginImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFeedPostLoginPluginImpl.swift; sourceTree = "<group>"; };
 		1FF839B520AC461400127D68 /* FirstLaunch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstLaunch.swift; sourceTree = "<group>"; };
 		1FF839B820AC49EE00127D68 /* UserCacher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCacher.swift; sourceTree = "<group>"; };
+		F3EAFC5720CBDFB200F7AE86 /* AudioPlayerObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayerObserver.swift; sourceTree = "<group>"; };
+		F3EAFC5920CBE4BA00F7AE86 /* AudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -271,6 +275,7 @@
 		0F563AFB207DB168005B365E /* CustomCell */ = {
 			isa = PBXGroup;
 			children = (
+				F3EAFC4520CA305B00F7AE86 /* BroadcastDelegate */,
 				0F2DC34520B7FE58002740EF /* OnBoardingScroll */,
 				1FF839B720AC498E00127D68 /* Simple_DI */,
 				1FF839B420AC3D6200127D68 /* DetectTheFirstLauch */,
@@ -418,6 +423,15 @@
 				1FF839B820AC49EE00127D68 /* UserCacher.swift */,
 			);
 			path = Simple_DI;
+			sourceTree = "<group>";
+		};
+		F3EAFC4520CA305B00F7AE86 /* BroadcastDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				F3EAFC5720CBDFB200F7AE86 /* AudioPlayerObserver.swift */,
+				F3EAFC5920CBE4BA00F7AE86 /* AudioPlayer.swift */,
+			);
+			path = BroadcastDelegate;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -572,6 +586,7 @@
 				0F563B3A207DE15F005B365E /* DetailTableViewController.swift in Sources */,
 				0F2DC34820B7FE99002740EF /* OnBoardingScrollViewController.swift in Sources */,
 				0F2DC35720B81843002740EF /* OnBoardingScrollInteractor.swift in Sources */,
+				F3EAFC5A20CBE4BA00F7AE86 /* AudioPlayer.swift in Sources */,
 				0F96D34F20BD5605004F5FDF /* LoginViewController.swift in Sources */,
 				0F563B4B207DF1D1005B365E /* DetailCell.swift in Sources */,
 				1FF839B320AC399A00127D68 /* UserFeedPostLoginPluginImpl.swift in Sources */,
@@ -597,6 +612,7 @@
 				0F563B48207DE7C7005B365E /* MealDataModel.swift in Sources */,
 				0F641A0920B412A000AD10EF /* PageContentModel.swift in Sources */,
 				0F96D35420BD57E1004F5FDF /* MasterScrollInteractor.swift in Sources */,
+				F3EAFC5820CBDFB200F7AE86 /* AudioPlayerObserver.swift in Sources */,
 				0F563AFD207DB168005B365E /* AppDelegate.swift in Sources */,
 				1FF839AE20AC1B5100127D68 /* Authenticator.swift in Sources */,
 				1FF839AA20AC1AB100127D68 /* PostLoginFailurePlugin.swift in Sources */,
