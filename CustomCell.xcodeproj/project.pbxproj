@@ -21,6 +21,16 @@
 		0F2DC35520B81827002740EF /* OnBoardingScrollPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2DC35420B81827002740EF /* OnBoardingScrollPresenter.swift */; };
 		0F2DC35720B81843002740EF /* OnBoardingScrollInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2DC35620B81843002740EF /* OnBoardingScrollInteractor.swift */; };
 		0F2DC35A20B818D2002740EF /* OnBoardingScrollRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2DC35920B818D2002740EF /* OnBoardingScrollRouter.swift */; };
+		0F4ED38720BE3CD100E49F2B /* CustomScrollCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4ED38520BE3CD100E49F2B /* CustomScrollCell.swift */; };
+		0F4ED38820BE3CD100E49F2B /* CustomScrollCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F4ED38620BE3CD100E49F2B /* CustomScrollCell.xib */; };
+		0F4ED39120BE400C00E49F2B /* DeleteItemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4ED38F20BE400C00E49F2B /* DeleteItemController.swift */; };
+		0F4ED39220BE400C00E49F2B /* DeleteItemController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F4ED39020BE400C00E49F2B /* DeleteItemController.xib */; };
+		0F4ED39520BE40DA00E49F2B /* FlagItemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4ED39320BE40DA00E49F2B /* FlagItemController.swift */; };
+		0F4ED39620BE40DA00E49F2B /* FlagItemController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F4ED39420BE40DA00E49F2B /* FlagItemController.xib */; };
+		0F4ED39920BE43E200E49F2B /* MailListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4ED39720BE43E200E49F2B /* MailListController.swift */; };
+		0F4ED39A20BE43E200E49F2B /* MailListController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F4ED39820BE43E200E49F2B /* MailListController.xib */; };
+		0F4ED39E20BE59DE00E49F2B /* ScrollCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4ED39C20BE59DE00E49F2B /* ScrollCell.swift */; };
+		0F4ED39F20BE59DE00E49F2B /* ScrollCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F4ED39D20BE59DE00E49F2B /* ScrollCell.xib */; };
 		0F563AFD207DB168005B365E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F563AFC207DB168005B365E /* AppDelegate.swift */; };
 		0F563B02207DB168005B365E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F563B00207DB168005B365E /* Main.storyboard */; };
 		0F563B04207DB168005B365E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F563B03207DB168005B365E /* Assets.xcassets */; };
@@ -101,6 +111,16 @@
 		0F2DC35420B81827002740EF /* OnBoardingScrollPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingScrollPresenter.swift; sourceTree = "<group>"; };
 		0F2DC35620B81843002740EF /* OnBoardingScrollInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingScrollInteractor.swift; sourceTree = "<group>"; };
 		0F2DC35920B818D2002740EF /* OnBoardingScrollRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingScrollRouter.swift; sourceTree = "<group>"; };
+		0F4ED38520BE3CD100E49F2B /* CustomScrollCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomScrollCell.swift; sourceTree = "<group>"; };
+		0F4ED38620BE3CD100E49F2B /* CustomScrollCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomScrollCell.xib; sourceTree = "<group>"; };
+		0F4ED38F20BE400C00E49F2B /* DeleteItemController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteItemController.swift; sourceTree = "<group>"; };
+		0F4ED39020BE400C00E49F2B /* DeleteItemController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeleteItemController.xib; sourceTree = "<group>"; };
+		0F4ED39320BE40DA00E49F2B /* FlagItemController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagItemController.swift; sourceTree = "<group>"; };
+		0F4ED39420BE40DA00E49F2B /* FlagItemController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FlagItemController.xib; sourceTree = "<group>"; };
+		0F4ED39720BE43E200E49F2B /* MailListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailListController.swift; sourceTree = "<group>"; };
+		0F4ED39820BE43E200E49F2B /* MailListController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MailListController.xib; sourceTree = "<group>"; };
+		0F4ED39C20BE59DE00E49F2B /* ScrollCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollCell.swift; sourceTree = "<group>"; };
+		0F4ED39D20BE59DE00E49F2B /* ScrollCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScrollCell.xib; sourceTree = "<group>"; };
 		0F563AF9207DB168005B365E /* CustomCell.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomCell.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F563AFC207DB168005B365E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0F563B01207DB168005B365E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -180,17 +200,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0F29AF7E2080A63300F41214 /* View Controller */ = {
-			isa = PBXGroup;
-			children = (
-				0F29AF7F2080A64E00F41214 /* EditPhotoController.swift */,
-				0F29AF802080A64E00F41214 /* EditPhotoController.xib */,
-				0F29AF832080A6EA00F41214 /* EditDescriptionController.swift */,
-				0F29AF842080A6EA00F41214 /* EditDescriptionController.xib */,
-			);
-			path = "View Controller";
-			sourceTree = "<group>";
-		};
 		0F2DC34520B7FE58002740EF /* OnBoardingScroll */ = {
 			isa = PBXGroup;
 			children = (
@@ -248,6 +257,30 @@
 			path = Router;
 			sourceTree = "<group>";
 		};
+		0F4ED38420BE3BB200E49F2B /* CustomScrollCellDraft */ = {
+			isa = PBXGroup;
+			children = (
+				0F4ED38520BE3CD100E49F2B /* CustomScrollCell.swift */,
+				0F4ED38620BE3CD100E49F2B /* CustomScrollCell.xib */,
+				0F4ED38F20BE400C00E49F2B /* DeleteItemController.swift */,
+				0F4ED39020BE400C00E49F2B /* DeleteItemController.xib */,
+				0F4ED39320BE40DA00E49F2B /* FlagItemController.swift */,
+				0F4ED39420BE40DA00E49F2B /* FlagItemController.xib */,
+			);
+			path = CustomScrollCellDraft;
+			sourceTree = "<group>";
+		};
+		0F4ED39B20BE59B000E49F2B /* CustomScrollCell */ = {
+			isa = PBXGroup;
+			children = (
+				0F4ED39720BE43E200E49F2B /* MailListController.swift */,
+				0F4ED39820BE43E200E49F2B /* MailListController.xib */,
+				0F4ED39C20BE59DE00E49F2B /* ScrollCell.swift */,
+				0F4ED39D20BE59DE00E49F2B /* ScrollCell.xib */,
+			);
+			path = CustomScrollCell;
+			sourceTree = "<group>";
+		};
 		0F563AF0207DB168005B365E = {
 			isa = PBXGroup;
 			children = (
@@ -271,15 +304,14 @@
 		0F563AFB207DB168005B365E /* CustomCell */ = {
 			isa = PBXGroup;
 			children = (
+				0F4ED39B20BE59B000E49F2B /* CustomScrollCell */,
+				0F4ED38420BE3BB200E49F2B /* CustomScrollCellDraft */,
 				0F2DC34520B7FE58002740EF /* OnBoardingScroll */,
 				1FF839B720AC498E00127D68 /* Simple_DI */,
 				1FF839B420AC3D6200127D68 /* DetectTheFirstLauch */,
 				1FF839AF20AC35B500127D68 /* Ex_plugin_Impl */,
 				1FF839A620AC196300127D68 /* Login_Plugin */,
-				0F29AF7E2080A63300F41214 /* View Controller */,
-				0F563B46207DE2A4005B365E /* Model */,
-				0F563B45207DE27C005B365E /* TableViewController */,
-				0F563B44207DE246005B365E /* CellCustom */,
+				0F563B45207DE27C005B365E /* MealTableView */,
 				0F563AFC207DB168005B365E /* AppDelegate.swift */,
 				0F563B00207DB168005B365E /* Main.storyboard */,
 				0F28CC21207F39E50078943C /* ViewController.swift */,
@@ -326,13 +358,15 @@
 			path = CellCustom;
 			sourceTree = "<group>";
 		};
-		0F563B45207DE27C005B365E /* TableViewController */ = {
+		0F563B45207DE27C005B365E /* MealTableView */ = {
 			isa = PBXGroup;
 			children = (
+				0F563B44207DE246005B365E /* CellCustom */,
+				0F563B46207DE2A4005B365E /* Model */,
 				0F5CF3C8208590A900CD003F /* DetailView */,
 				0F5CF3C720858FDB00CD003F /* ListView */,
 			);
-			path = TableViewController;
+			path = MealTableView;
 			sourceTree = "<group>";
 		};
 		0F563B46207DE2A4005B365E /* Model */ = {
@@ -361,6 +395,10 @@
 		0F5CF3C8208590A900CD003F /* DetailView */ = {
 			isa = PBXGroup;
 			children = (
+				0F29AF7F2080A64E00F41214 /* EditPhotoController.swift */,
+				0F29AF802080A64E00F41214 /* EditPhotoController.xib */,
+				0F29AF832080A6EA00F41214 /* EditDescriptionController.swift */,
+				0F29AF842080A6EA00F41214 /* EditDescriptionController.xib */,
 				0F5CF3CD2085A86100CD003F /* DetailViewInteractor.swift */,
 				0F563B38207DE15F005B365E /* DetailTableViewController.swift */,
 				0F563B39207DE15F005B365E /* DetailTableViewController.xib */,
@@ -529,18 +567,23 @@
 			files = (
 				0F563B3B207DE15F005B365E /* DetailTableViewController.xib in Resources */,
 				0F6419F120B3B9B200AD10EF /* GetStartedViewController.xib in Resources */,
+				0F4ED39220BE400C00E49F2B /* DeleteItemController.xib in Resources */,
 				0F563B07207DB168005B365E /* LaunchScreen.storyboard in Resources */,
 				0F7D518820BCED54007326CF /* MasterScrollViewController.xib in Resources */,
+				0F4ED39A20BE43E200E49F2B /* MailListController.xib in Resources */,
 				0F563B04207DB168005B365E /* Assets.xcassets in Resources */,
 				0F563B02207DB168005B365E /* Main.storyboard in Resources */,
 				0F563B43207DE214005B365E /* IngredientCell.xib in Resources */,
 				0F563B33207DB3E8005B365E /* MealTableViewController.xib in Resources */,
+				0F4ED39F20BE59DE00E49F2B /* ScrollCell.xib in Resources */,
 				0F96D35020BD5605004F5FDF /* LoginViewController.xib in Resources */,
 				0F2DC34F20B7FEC6002740EF /* PageViewController.xib in Resources */,
 				0F29AF822080A64E00F41214 /* EditPhotoController.xib in Resources */,
+				0F4ED38820BE3CD100E49F2B /* CustomScrollCell.xib in Resources */,
 				0F563B3F207DE1DA005B365E /* DescriptionCell.xib in Resources */,
 				0F29AF862080A6EA00F41214 /* EditDescriptionController.xib in Resources */,
 				0F563B2D207DB33E005B365E /* MealCell.xib in Resources */,
+				0F4ED39620BE40DA00E49F2B /* FlagItemController.xib in Resources */,
 				0F563B50207DF1ED005B365E /* AuthorCell.xib in Resources */,
 				0F563B4C207DF1D1005B365E /* DetailCell.xib in Resources */,
 				0F2DC34920B7FE99002740EF /* OnBoardingScrollViewController.xib in Resources */,
@@ -581,12 +624,14 @@
 				0F28CC22207F39E50078943C /* ViewController.swift in Sources */,
 				1FF839B920AC49EE00127D68 /* UserCacher.swift in Sources */,
 				0F96D35820BD5855004F5FDF /* MasterScrollPresenter.swift in Sources */,
+				0F4ED38720BE3CD100E49F2B /* CustomScrollCell.swift in Sources */,
 				0F6419F020B3B9B200AD10EF /* GetStartedViewController.swift in Sources */,
 				0F28CC1F207EF94D0078943C /* TableDataModel.swift in Sources */,
 				0F563B52207E2021005B365E /* CellConfigure.swift in Sources */,
 				0F2DC35520B81827002740EF /* OnBoardingScrollPresenter.swift in Sources */,
 				0F29AF892080B82E00F41214 /* DescriptionDelegateModel.swift in Sources */,
 				0F29AF852080A6EA00F41214 /* EditDescriptionController.swift in Sources */,
+				0F4ED39E20BE59DE00E49F2B /* ScrollCell.swift in Sources */,
 				0F563B35207DB97D005B365E /* MealModel.swift in Sources */,
 				0F563B4F207DF1ED005B365E /* AuthorCell.swift in Sources */,
 				0F5CF3D02085ACC700CD003F /* TableDelegateModel.swift in Sources */,
@@ -596,12 +641,15 @@
 				0F5CF3CC2085A09500CD003F /* ListViewModel.swift in Sources */,
 				0F563B48207DE7C7005B365E /* MealDataModel.swift in Sources */,
 				0F641A0920B412A000AD10EF /* PageContentModel.swift in Sources */,
+				0F4ED39120BE400C00E49F2B /* DeleteItemController.swift in Sources */,
 				0F96D35420BD57E1004F5FDF /* MasterScrollInteractor.swift in Sources */,
 				0F563AFD207DB168005B365E /* AppDelegate.swift in Sources */,
 				1FF839AE20AC1B5100127D68 /* Authenticator.swift in Sources */,
 				1FF839AA20AC1AB100127D68 /* PostLoginFailurePlugin.swift in Sources */,
 				0F7D518720BCED54007326CF /* MasterScrollViewController.swift in Sources */,
+				0F4ED39920BE43E200E49F2B /* MailListController.swift in Sources */,
 				1FF839AC20AC1ADE00127D68 /* PostLoginSuccessPlugin.swift in Sources */,
+				0F4ED39520BE40DA00E49F2B /* FlagItemController.swift in Sources */,
 				0F96D34B20BD4CBD004F5FDF /* TranslateAnimation.swift in Sources */,
 				0F5CF3CA2085910D00CD003F /* ListViewInteractor.swift in Sources */,
 				0F563B2C207DB33E005B365E /* MealCell.swift in Sources */,

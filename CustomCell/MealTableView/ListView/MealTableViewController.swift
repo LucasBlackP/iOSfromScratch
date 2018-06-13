@@ -27,7 +27,7 @@ class MealTableViewController: UIViewController, UITableViewDelegate, UITableVie
         //Configure Views - Interactor
         configVI()
         
-        testCallPlugin()
+//        testCallPlugin()
     }
     //MARK: - Test call using plugin
     
@@ -73,7 +73,6 @@ class MealTableViewController: UIViewController, UITableViewDelegate, UITableVie
     //PushViewDelegate
     func pushViewController(viewController: UIViewController) {
         UIView.animate(withDuration: 9, animations: {
-            
         })
         navigationController?.pushViewController(viewController, animated: true)
     }
