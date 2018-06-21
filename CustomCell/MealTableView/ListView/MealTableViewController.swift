@@ -9,6 +9,7 @@
 import UIKit
 
 protocol MealTableViewControllerProtocol:class{
+    func updateData(data: MenuData?)
 }
 
 
@@ -52,7 +53,7 @@ class MealTableViewController: UIViewController, UITableViewDelegate, UITableVie
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let item = tableDataSource!.listMeal[indexPath.section].values.first![indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: type(of: item).reuseId)!
-        item.configure(cell: cell)
+        item.configure(cell: cell, cellDelegate: self, indexPath: indexPath)
         return cell
     }
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
@@ -95,8 +96,23 @@ extension MealTableViewController{
         registerCell()
         self.title = "Food menu"
     }
+    func updateData(data: MenuData?) {
+        self.tableDataSource = data
+        reloadData()
+    }
 }
-
+extension MealTableViewController: ScrollableCellDelegate{
+    func cellWasDeleted(indexPath: IndexPath) {
+         listViewDelegate?.deleteData(index: indexPath.row)
+    }
+    
+    func cellWasFlagged(indexPath: IndexPath) {
+        print("Flagged")
+    }
+    func cellWasSelected(indexPath: IndexPath) {
+        tableView(tableView, didSelectRowAt: indexPath)
+    }
+}
 
 
 

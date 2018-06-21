@@ -10,17 +10,17 @@ import UIKit
 
 protocol ListViewInteractorProtocol: class{
     func initData()->MenuData?
+    func deleteData(index: Int)
 }
 
 class ListViewInteractor{
     
     //MARK: Properties
     weak var tableViewControllerDelegate: MealTableViewControllerProtocol?
-    
+    var tableData = [Meal]()
 }
 extension ListViewInteractor: ListViewInteractorProtocol{
     func initData()->MenuData?{
-        var tableData = [Meal]()
         tableData.append(Meal(name: "Meal1", photo: UIImage(named:"Image-1")!, description:
             """
             Boil water and salt in a pot with a lid.
@@ -103,6 +103,15 @@ extension ListViewInteractor: ListViewInteractorProtocol{
             Serve with milk and sugar or honey.
             """, ingredients: ["Sugar","Salt"],percent: [50,50],author: "David Micheal"))
         
-        return MenuData(listMeal: ["Main": [tableData[0],tableData[1],tableData[2]], "Dessert":[tableData[3],tableData[4],tableData[5],tableData[6],tableData[7],tableData[8],tableData[9]]])
+        return MenuData(listMeal: ["Main": [tableData[0],tableData[1],tableData[2],tableData[3],tableData[4],tableData[5],tableData[6],tableData[7],tableData[8],tableData[9]]])
+    }
+    func deleteData(index: Int) {
+        tableData.remove(at: index)
+        var listMeal = [Meal]()
+        for meal in tableData {
+            listMeal.append(meal)
+        }
+        tableViewControllerDelegate?.updateData(data: MenuData(listMeal: ["Main": listMeal]))
+        
     }
 }

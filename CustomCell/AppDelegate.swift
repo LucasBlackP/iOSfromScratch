@@ -13,12 +13,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     //let flag = false
-
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         window = UIWindow(frame: UIScreen.main.bounds)
-//        window?.rootViewController = MasterScrollRouter.configureVIPER()
-        window?.rootViewController = MailListController()
+        prepareRootviewForWindow()
         window?.makeKeyAndVisible()
         return true
     }
@@ -44,7 +43,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
+}
 
-
+extension AppDelegate{
+    func prepareRootviewForWindow(){
+        var detectFirstLaunch: DetectFirstLaunch!
+        #if DEVELOPMENT
+        detectFirstLaunch = DetectFirstLaunch.alwaysFirstLaunch()
+        #else
+        detectFirstLaunch = DetectFirstLaunch(userDefaults: .standard, key: "isCustomCellAppFirstLaunch")
+        #endif
+        if detectFirstLaunch.wasLaunchedBefore{
+            window?.rootViewController = LoginViewController()
+        }
+        else {
+            window?.rootViewController = MasterScrollRouter.configureVIPER()
+        }
+    }
 }
 

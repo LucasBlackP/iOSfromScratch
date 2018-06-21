@@ -9,18 +9,19 @@
 import UIKit
 
 class DetailCell: UITableViewCell ,ConfigurableCell{
-    
+    weak var delegate: ScrollableCellDelegate?
+    var indexPath: IndexPath?
     typealias DataType = Meal
     @IBOutlet weak var photo: UIImageView!{
         didSet{
-            self.photo.layer.masksToBounds = true
-            self.photo.layer.cornerRadius = photo.frame.height/2.0
-            self.photo.clipsToBounds = true
+            photo.layer.masksToBounds = true
+            photo.layer.cornerRadius = photo.frame.height/2.0
+            photo.clipsToBounds = true
         }
     }
     @IBOutlet weak var name: UILabel!{
         didSet{
-            self.name.font = UIFont.boldSystemFont(ofSize: 18)
+            name.font = UIFont.boldSystemFont(ofSize: 18)
         }
     }
     override func awakeFromNib() {
@@ -34,14 +35,18 @@ class DetailCell: UITableViewCell ,ConfigurableCell{
         // Configure the view for the selected state
     }
     func configure(data: Meal) {
-        self.name.text = data.name
-        self.photo.image = data.photo
+        name.text = data.name
+        photo.image = data.photo
     }
     func pushView(data: Meal) -> UIViewController? {
         let vc = EditPhotoController()
         vc.image = data.photo
         vc.title = data.name
         return vc
+    }
+    func setDelegate(delegate: ScrollableCellDelegate?, indexPath: IndexPath) {
+        self.delegate = delegate
+        self.indexPath = indexPath
     }
     
     

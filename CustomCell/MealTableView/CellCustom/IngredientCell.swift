@@ -9,9 +9,8 @@
 import UIKit
 
 class IngredientCell: UITableViewCell,ConfigurableCell {
-    
-    
-    
+    weak var delegate: ScrollableCellDelegate?
+    var indexPath: IndexPath?
     typealias DataType = [String:Int]
     @IBOutlet weak var ingredient: UILabel!
     @IBOutlet weak var percent: UILabel!
@@ -34,5 +33,9 @@ class IngredientCell: UITableViewCell,ConfigurableCell {
     }
     func pushView(data: [String : Int]) -> UIViewController? {
         return nil
+    }
+    func setDelegate(delegate: ScrollableCellDelegate?, indexPath: IndexPath) {
+        self.delegate = delegate
+        self.indexPath = indexPath
     }
 }

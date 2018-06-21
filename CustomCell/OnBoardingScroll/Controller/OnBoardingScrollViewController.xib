@@ -45,7 +45,7 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="LCd-50-Vzu" firstAttribute="top" secondItem="gxl-Ij-rXc" secondAttribute="bottom" constant="-64" id="Aod-oB-UpL"/>
+                <constraint firstItem="LCd-50-Vzu" firstAttribute="bottom" secondItem="gxl-Ij-rXc" secondAttribute="bottom" constant="-20" id="Aod-oB-UpL"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="9Ek-m8-3hX" secondAttribute="bottom" constant="40" id="BEK-oZ-yOm"/>
                 <constraint firstItem="gxl-Ij-rXc" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="JI2-mm-rlv"/>
                 <constraint firstItem="gxl-Ij-rXc" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="UnG-Rn-L86"/>

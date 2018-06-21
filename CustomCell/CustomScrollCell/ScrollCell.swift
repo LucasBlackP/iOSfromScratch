@@ -8,11 +8,9 @@
 
 import UIKit
 
-class ScrollCell: UITableViewCell, ConfigurableCell {
-   
-    
-    typealias DataType = String
-    //MARK: Properties
+class ScrollCell: UITableViewCell{
+    weak var delegate: ScrollableCellDelegate?
+    var indexPath: IndexPath?
     @IBOutlet weak var scrollView: UIScrollView!{
         didSet{
             scrollView.showsHorizontalScrollIndicator = false
@@ -40,6 +38,7 @@ class ScrollCell: UITableViewCell, ConfigurableCell {
     }()
     
     lazy var view: UIView! = {
+        
         let viewContent = UIView(frame: CGRect(x: 0, y: 0, width: frame.width, height: frame.height))
         viewContent.addSubview(title)
         viewContent.backgroundColor = .green
@@ -51,7 +50,8 @@ class ScrollCell: UITableViewCell, ConfigurableCell {
         let titleContent = UILabel(frame: CGRect(x: 0, y: 0, width: frame.width - 20, height: frame.height - 20))
         return titleContent
     }()
-    //Methods
+    
+    //MARK: - Lifecycle
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -61,8 +61,12 @@ class ScrollCell: UITableViewCell, ConfigurableCell {
         super.setSelected(selected, animated: animated)
         // Configure the view for the selected state
     }
-    override func layoutSubviews() {
+    override func didMoveToSuperview() {
+        configureView()
     }
+    
+    //MARK: - Configuration
+    //Configure scroll view's content size, and adding handle tap for it
     func configureView(){
         scrollView.delegate = self
         title.center = view.center
@@ -77,6 +81,7 @@ class ScrollCell: UITableViewCell, ConfigurableCell {
         scrollView.addSubview(view)
     }
     
+    //MARK: - Logic
     @objc func handleTap(_ recognizer: UITapGestureRecognizer) {
         print("Touch")
     }
@@ -87,15 +92,8 @@ class ScrollCell: UITableViewCell, ConfigurableCell {
     @objc func actionFlag(_ sender: UIButton) {
         print("Flag")
     }
-    func configure(data: String) {
-        title.text = data
-    }
-    
-    func pushView(data: String) -> UIViewController? {
-        return nil
-    }
-    
 }
+
 extension ScrollCell: UIScrollViewDelegate{
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let delta = scrollView.contentOffset.x - oldOffset
@@ -104,4 +102,18 @@ extension ScrollCell: UIScrollViewDelegate{
         oldOffset = scrollView.contentOffset.x
     }
     
+}
+extension ScrollCell: ConfigurableCell{
+    typealias DataType = String
+    func configure(data: String) {
+        title.text = data
+    }
+    
+    func pushView(data: String) -> UIViewController? {
+        return nil
+    }
+    func setDelegate(delegate: ScrollableCellDelegate?, indexPath: IndexPath) {
+        self.delegate = delegate
+        self.indexPath = indexPath
+    }
 }

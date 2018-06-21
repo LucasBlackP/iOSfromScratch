@@ -14,23 +14,27 @@ class EditPhotoController: UIViewController {
     @IBOutlet weak var btnChangePhoto: UIButton!
     @IBOutlet weak var photo: UIImageView!{
         didSet{
-            photo.clipsToBounds = true
-            photo.layer.masksToBounds = true
-            photo.layer.cornerRadius = photo.bounds.height/2.0
+            photo.image = image
         }
     }
     var image:UIImage?
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        photo.image = image
+        
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
+    override func viewDidLayoutSubviews() {
+        //Configure photo
+        photo.clipsToBounds = true
+        photo.layer.masksToBounds = true
+        photo.layer.cornerRadius = photo.bounds.height/2.0
+    }
 
 
 

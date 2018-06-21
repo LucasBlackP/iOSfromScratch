@@ -42,7 +42,7 @@ class DetailTableViewController: UIViewController,UITableViewDelegate,UITableVie
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let item = tableData!.data[indexPath.section].values.first![indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: type(of: item).reuseId)!
-        item.configure(cell: cell)
+        item.configure(cell: cell, cellDelegate: nil, indexPath: indexPath)
         return cell
     }
     

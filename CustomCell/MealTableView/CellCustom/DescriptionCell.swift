@@ -9,9 +9,8 @@
 import UIKit
 
 class DescriptionCell: UITableViewCell,ConfigurableCell{
-    
-    
-
+    weak var delegate: ScrollableCellDelegate?
+    var indexPath: IndexPath?
     @IBOutlet weak var mealDesc: UILabel!
      typealias DataType = String
     override func awakeFromNib() {
@@ -32,6 +31,10 @@ class DescriptionCell: UITableViewCell,ConfigurableCell{
         vc.recvDesc = data
         vc.title = "Description"
         return vc
+    }
+    func setDelegate(delegate: ScrollableCellDelegate?, indexPath: IndexPath) {
+        self.delegate = delegate
+        self.indexPath = indexPath
     }
 
 }

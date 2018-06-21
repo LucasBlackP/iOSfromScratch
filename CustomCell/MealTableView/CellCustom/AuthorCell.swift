@@ -9,6 +9,8 @@
 import UIKit
 
 class AuthorCell: UITableViewCell,ConfigurableCell {
+    weak var delegate: ScrollableCellDelegate?
+    var indexPath: IndexPath?
     @IBOutlet weak var author: UITextField!
     typealias DataType = String
     override func awakeFromNib() {
@@ -30,7 +32,10 @@ class AuthorCell: UITableViewCell,ConfigurableCell {
     func pushView(data: String) -> UIViewController? {
         return nil
     }
-    
+    func setDelegate(delegate: ScrollableCellDelegate?, indexPath: IndexPath) {
+        self.delegate = delegate
+        self.indexPath = indexPath
+    }
 }
 
 

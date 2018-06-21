@@ -39,11 +39,18 @@ class LoginViewController: UIViewController, ScrollPageContentProtocol, ScrollPa
     }
     
     @IBAction func login(_ sender: UIButton) {
-        let tableView = MealTableViewController()
-        let navTableView = UINavigationController()
-        navTableView.addChildViewController(tableView)
-        self.view.window?.rootViewController = navTableView
-//        present(navTableView, animated: true, completion: nil)
-//        self.view.willRemoveSubview(self.view)
+        let tabbarController = UITabBarController()
+        let homeController = MealTableViewController()
+        let navTableView = UINavigationController(rootViewController: homeController)
+        let chartController = TopChartsViewController()
+        let tagController = SearchViewController()
+        let userController = ProfileViewController()
+        navTableView.tabBarItem = UITabBarItem(title: "Home", image: UIImage(named: "home")!, tag: 1)
+        chartController.tabBarItem = UITabBarItem(title: "Charts", image: UIImage(named: "charts")!, tag: 2)
+        tagController.tabBarItem = UITabBarItem(title: "Search", image: UIImage(named: "search")!, tag: 3)
+        userController.tabBarItem = UITabBarItem(title: "Profile", image: UIImage(named: "profile")!, tag: 4)
+        tabbarController.viewControllers = [navTableView,chartController,tagController,userController]
+        self.view.window?.rootViewController = tabbarController
+
     }
 }
