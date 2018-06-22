@@ -67,8 +67,10 @@
 		1FF839B320AC399A00127D68 /* UserFeedPostLoginPluginImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF839B220AC399A00127D68 /* UserFeedPostLoginPluginImpl.swift */; };
 		1FF839B620AC461400127D68 /* FirstLaunch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF839B520AC461400127D68 /* FirstLaunch.swift */; };
 		1FF839B920AC49EE00127D68 /* UserCacher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF839B820AC49EE00127D68 /* UserCacher.swift */; };
-		F3EAFC5820CBDFB200F7AE86 /* AudioPlayerObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3EAFC5720CBDFB200F7AE86 /* AudioPlayerObserver.swift */; };
-		F3EAFC5A20CBE4BA00F7AE86 /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3EAFC5920CBE4BA00F7AE86 /* AudioPlayer.swift */; };
+		F3A996EA20DB80DA00B2E6E9 /* AddNofViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A996E920DB80DA00B2E6E9 /* AddNofViewController.swift */; };
+		F3A996ED20DB8CE700B2E6E9 /* RadioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A996EC20DB8CE700B2E6E9 /* RadioPlayer.swift */; };
+		F3A996EF20DB9B5A00B2E6E9 /* RadioPlayingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A996EE20DB9B5A00B2E6E9 /* RadioPlayingViewController.swift */; };
+		F3EAFF7E20D2774100F7AE86 /* AudioPlayerWithNof.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3EAFF7D20D2774100F7AE86 /* AudioPlayerWithNof.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -155,8 +157,10 @@
 		1FF839B220AC399A00127D68 /* UserFeedPostLoginPluginImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFeedPostLoginPluginImpl.swift; sourceTree = "<group>"; };
 		1FF839B520AC461400127D68 /* FirstLaunch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstLaunch.swift; sourceTree = "<group>"; };
 		1FF839B820AC49EE00127D68 /* UserCacher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCacher.swift; sourceTree = "<group>"; };
-		F3EAFC5720CBDFB200F7AE86 /* AudioPlayerObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayerObserver.swift; sourceTree = "<group>"; };
-		F3EAFC5920CBE4BA00F7AE86 /* AudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
+		F3A996E920DB80DA00B2E6E9 /* AddNofViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNofViewController.swift; sourceTree = "<group>"; };
+		F3A996EC20DB8CE700B2E6E9 /* RadioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioPlayer.swift; sourceTree = "<group>"; };
+		F3A996EE20DB9B5A00B2E6E9 /* RadioPlayingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioPlayingViewController.swift; sourceTree = "<group>"; };
+		F3EAFF7D20D2774100F7AE86 /* AudioPlayerWithNof.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayerWithNof.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -275,6 +279,7 @@
 		0F563AFB207DB168005B365E /* CustomCell */ = {
 			isa = PBXGroup;
 			children = (
+				F3A996EB20DB8CB600B2E6E9 /* RadioPlayer */,
 				F3EAFC4520CA305B00F7AE86 /* BroadcastDelegate */,
 				0F2DC34520B7FE58002740EF /* OnBoardingScroll */,
 				1FF839B720AC498E00127D68 /* Simple_DI */,
@@ -425,11 +430,20 @@
 			path = Simple_DI;
 			sourceTree = "<group>";
 		};
+		F3A996EB20DB8CB600B2E6E9 /* RadioPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				F3A996EC20DB8CE700B2E6E9 /* RadioPlayer.swift */,
+				F3A996EE20DB9B5A00B2E6E9 /* RadioPlayingViewController.swift */,
+			);
+			path = RadioPlayer;
+			sourceTree = "<group>";
+		};
 		F3EAFC4520CA305B00F7AE86 /* BroadcastDelegate */ = {
 			isa = PBXGroup;
 			children = (
-				F3EAFC5720CBDFB200F7AE86 /* AudioPlayerObserver.swift */,
-				F3EAFC5920CBE4BA00F7AE86 /* AudioPlayer.swift */,
+				F3EAFF7D20D2774100F7AE86 /* AudioPlayerWithNof.swift */,
+				F3A996E920DB80DA00B2E6E9 /* AddNofViewController.swift */,
 			);
 			path = BroadcastDelegate;
 			sourceTree = "<group>";
@@ -583,16 +597,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				1FF839B120AC365100127D68 /* UserProfilePostLoginPluginImpl.swift in Sources */,
+				F3EAFF7E20D2774100F7AE86 /* AudioPlayerWithNof.swift in Sources */,
 				0F563B3A207DE15F005B365E /* DetailTableViewController.swift in Sources */,
 				0F2DC34820B7FE99002740EF /* OnBoardingScrollViewController.swift in Sources */,
 				0F2DC35720B81843002740EF /* OnBoardingScrollInteractor.swift in Sources */,
-				F3EAFC5A20CBE4BA00F7AE86 /* AudioPlayer.swift in Sources */,
 				0F96D34F20BD5605004F5FDF /* LoginViewController.swift in Sources */,
 				0F563B4B207DF1D1005B365E /* DetailCell.swift in Sources */,
 				1FF839B320AC399A00127D68 /* UserFeedPostLoginPluginImpl.swift in Sources */,
 				0F563B42207DE214005B365E /* IngredientCell.swift in Sources */,
 				0F29AF812080A64E00F41214 /* EditPhotoController.swift in Sources */,
 				1FF839B620AC461400127D68 /* FirstLaunch.swift in Sources */,
+				F3A996EA20DB80DA00B2E6E9 /* AddNofViewController.swift in Sources */,
 				0F28CC22207F39E50078943C /* ViewController.swift in Sources */,
 				1FF839B920AC49EE00127D68 /* UserCacher.swift in Sources */,
 				0F96D35820BD5855004F5FDF /* MasterScrollPresenter.swift in Sources */,
@@ -600,6 +615,7 @@
 				0F28CC1F207EF94D0078943C /* TableDataModel.swift in Sources */,
 				0F563B52207E2021005B365E /* CellConfigure.swift in Sources */,
 				0F2DC35520B81827002740EF /* OnBoardingScrollPresenter.swift in Sources */,
+				F3A996ED20DB8CE700B2E6E9 /* RadioPlayer.swift in Sources */,
 				0F29AF892080B82E00F41214 /* DescriptionDelegateModel.swift in Sources */,
 				0F29AF852080A6EA00F41214 /* EditDescriptionController.swift in Sources */,
 				0F563B35207DB97D005B365E /* MealModel.swift in Sources */,
@@ -612,13 +628,13 @@
 				0F563B48207DE7C7005B365E /* MealDataModel.swift in Sources */,
 				0F641A0920B412A000AD10EF /* PageContentModel.swift in Sources */,
 				0F96D35420BD57E1004F5FDF /* MasterScrollInteractor.swift in Sources */,
-				F3EAFC5820CBDFB200F7AE86 /* AudioPlayerObserver.swift in Sources */,
 				0F563AFD207DB168005B365E /* AppDelegate.swift in Sources */,
 				1FF839AE20AC1B5100127D68 /* Authenticator.swift in Sources */,
 				1FF839AA20AC1AB100127D68 /* PostLoginFailurePlugin.swift in Sources */,
 				0F7D518720BCED54007326CF /* MasterScrollViewController.swift in Sources */,
 				1FF839AC20AC1ADE00127D68 /* PostLoginSuccessPlugin.swift in Sources */,
 				0F96D34B20BD4CBD004F5FDF /* TranslateAnimation.swift in Sources */,
+				F3A996EF20DB9B5A00B2E6E9 /* RadioPlayingViewController.swift in Sources */,
 				0F5CF3CA2085910D00CD003F /* ListViewInteractor.swift in Sources */,
 				0F563B2C207DB33E005B365E /* MealCell.swift in Sources */,
 				0F2DC34E20B7FEC6002740EF /* PageViewController.swift in Sources */,
