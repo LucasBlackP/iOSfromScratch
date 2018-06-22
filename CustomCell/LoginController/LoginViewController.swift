@@ -7,9 +7,20 @@
 //
 
 import UIKit
+import Firebase
+import MBProgressHUD
+
+protocol LoginViewProtocol: class{
+    var interactor: LoginInteractorProtocol?{get set}
+    func onLoginError(message: String)
+    func onLoginSuccess(viewController: UIViewController)
+    func pushView(viewController: UIViewController)
+}
 
 class LoginViewController: UIViewController, ScrollPageContentProtocol, ScrollPageViewControllerProtocol {
    
+    var interactor: LoginInteractorProtocol?
+    var indicator: UIActivityIndicatorView!
     @IBOutlet weak var txtUserName: UITextField!
     @IBOutlet weak var txtPassword: UITextField!{
         didSet{
@@ -23,14 +34,15 @@ class LoginViewController: UIViewController, ScrollPageContentProtocol, ScrollPa
             btnLogin.layer.cornerRadius = btnLogin.frame.height/2.0
         }
     }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Login"
-
         // Do any additional setup after loading the view.
+        self.title = "Login"
+        
     }
-    
+    override func viewDidLayoutSubviews() {
+        configureView()
+    }
     func nextPage() -> Bool {
         return false
     }
@@ -38,19 +50,36 @@ class LoginViewController: UIViewController, ScrollPageContentProtocol, ScrollPa
     func config(contentModel: PageContentModel?) {
     }
     
-    @IBAction func login(_ sender: UIButton) {
-        let tabbarController = UITabBarController()
-        let homeController = MealTableViewController()
-        let navTableView = UINavigationController(rootViewController: homeController)
-        let chartController = TopChartsViewController()
-        let tagController = SearchViewController()
-        let userController = ProfileViewController()
-        navTableView.tabBarItem = UITabBarItem(title: "Home", image: UIImage(named: "home")!, tag: 1)
-        chartController.tabBarItem = UITabBarItem(title: "Charts", image: UIImage(named: "charts")!, tag: 2)
-        tagController.tabBarItem = UITabBarItem(title: "Search", image: UIImage(named: "search")!, tag: 3)
-        userController.tabBarItem = UITabBarItem(title: "Profile", image: UIImage(named: "profile")!, tag: 4)
-        tabbarController.viewControllers = [navTableView,chartController,tagController,userController]
-        self.view.window?.rootViewController = tabbarController
+    @IBAction func signUp(_ sender: UIButton) {
+       interactor?.signUp()
+    }
 
+    @IBAction func login(_ sender: UIButton) {
+        indicator.startAnimating()
+        btnLogin.titleLabel?.isHidden = true
+        interactor?.login(username: txtUserName.text!, password: txtPassword.text!)
+    }
+    func configureView(){
+        indicator = HUB.createIndicator(for: btnLogin)
+        self.view.addSubview(indicator)
+    }
+    func stopIndicator(){
+        indicator.stopAnimating()
+        btnLogin.titleLabel?.isHidden = false
+    }
+   
+}
+extension LoginViewController: LoginViewProtocol{
+    func onLoginError(message: String) {
+        stopIndicator()
+        print(message)
+    }
+    func onLoginSuccess(viewController: UIViewController) {
+        stopIndicator()
+        self.view.window?.rootViewController = viewController
+    }
+    func pushView(viewController: UIViewController) {
+        stopIndicator()
+        navigationController?.pushViewController(viewController, animated: true)
     }
 }

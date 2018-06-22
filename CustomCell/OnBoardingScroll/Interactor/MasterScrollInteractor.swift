@@ -16,7 +16,7 @@ class MasterScrollInteractor: MasterScrollInteractorProtocol{
     func loadScrollPage() -> [UIViewController] {
         let page1 = GetStartedViewController()
         let page2 = OnBoardingScrollRouter.configureVIPER()
-        let page3 = LoginViewController()
+        let page3 = LoginRouter.configure()
         return [page1,page2,page3]
     }
 }

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        FirebaseApp.configure()
         window = UIWindow(frame: UIScreen.main.bounds)
         prepareRootviewForWindow()
         window?.makeKeyAndVisible()
@@ -54,7 +56,8 @@ extension AppDelegate{
         detectFirstLaunch = DetectFirstLaunch(userDefaults: .standard, key: "isCustomCellAppFirstLaunch")
         #endif
         if detectFirstLaunch.wasLaunchedBefore{
-            window?.rootViewController = LoginViewController()
+            let navController = UINavigationController(rootViewController: LoginRouter.configure())
+            window?.rootViewController = navController
         }
         else {
             window?.rootViewController = MasterScrollRouter.configureVIPER()
