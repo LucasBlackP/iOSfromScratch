@@ -15,7 +15,7 @@ protocol MasterScrollViewProtocol: class{
 }
 
 class MasterScrollViewController: UIViewController, MasterScrollViewProtocol {
-    //MARK: Properties
+
     var presenter: MasterScrollPresenterProtocol?
     var pages: [UIViewController]?
     @IBOutlet weak var btnNext: UIButton!{
@@ -40,7 +40,9 @@ class MasterScrollViewController: UIViewController, MasterScrollViewProtocol {
     }
     var deltaDistance = 0.0
     var oldDistanceValue = 0.0
-    //MARK: Methods
+    var oldCenter = CGPoint(x: 0, y: 0)
+    
+    //MARK: -Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -52,13 +54,18 @@ class MasterScrollViewController: UIViewController, MasterScrollViewProtocol {
         // Dispose of any resources that can be recreated.
     }
     
+    override func viewDidLayoutSubviews() {
+        oldCenter = btnNext.center
+    }
     
+    //MARK: -Configuration
     func configureView(){
         self.title = "Master"
         view.frame = UIScreen.main.bounds
         view.bringSubview(toFront: btnNext)
         masterScrollView.delegate = self
     }
+    //MARK: -Logic
     func loadPageContent(){
         pages = presenter?.loadOnBoardingPages()
         guard let pageContents = pages else{
@@ -91,32 +98,21 @@ extension MasterScrollViewController: UIScrollViewDelegate{
         guard let pageContents = pages as? [ScrollPageViewControllerProtocol] else{
             return
         }
-        if(scrollView.contentOffset.x>0 && scrollView.contentOffset.x<view.frame.width*CGFloat(pageContents.count-1)){
-//        print("show offset \(scrollView.contentOffset.x)")
-        let distanceX = (btnVirtual.center.x - btnNext.center.x)
-        let distanceY = (btnVirtual.center.y - btnNext.center.y)
-        let angle = atan(distanceY/distanceX)
-        
-        if (Double(scrollView.contentOffset.x) > oldDistanceValue){
-            let translate = (Double(scrollView.contentOffset.x) - oldDistanceValue)*Double(cos(angle))/1.8
-            let translateX = translate*Double(cos(angle))*Double(view.frame.width/414)
-            let translateY = translate*Double(sin(angle))*Double(view.frame.height/736)
-//             print("show offset \(translateX)  \(translateY)")
+        if(scrollView.contentOffset.x == 0){
             UIView.animate(withDuration: 0.5){
-                self.btnNext.center = CGPoint(x: self.btnNext.center.x + CGFloat(translateX), y: self.btnNext.center.y + CGFloat(translateY))
+                self.btnNext.center = CGPoint(x: self.oldCenter.x, y: self.oldCenter.y)
             }
         }
-        else{
-            let translate = abs(Double(scrollView.contentOffset.x) - oldDistanceValue)*Double(cos(angle))/1.8
-            let translateX = translate*Double(cos(angle))*Double(view.frame.width/414)
-            let translateY = translate*Double(sin(angle))*Double(view.frame.height/736)
-//            print("show offset \(translateX)  \(translateY)")
+        else if (scrollView.contentOffset.x == view.frame.width){
+            btnNext.isHidden = false
+            btnNext.isEnabled = true
             UIView.animate(withDuration: 0.5){
-                self.btnNext.center = CGPoint(x: self.btnNext.center.x - CGFloat(translateX), y: self.btnNext.center.y - CGFloat(translateY))
+                self.btnNext.center = CGPoint(x: self.btnVirtual.center.x, y: self.btnVirtual.center.y)
             }
         }
-        oldDistanceValue = Double(scrollView.contentOffset.x)
-        
+        else if(scrollView.contentOffset.x>view.frame.width*CGFloat(pageContents.count-2)){
+            btnNext.isHidden = true
+            btnNext.isEnabled = false
         }
     }
     

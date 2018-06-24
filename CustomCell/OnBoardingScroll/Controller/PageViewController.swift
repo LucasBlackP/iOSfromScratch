@@ -10,32 +10,25 @@ import UIKit
 
 class PageViewController: UIViewController, ScrollPageContentProtocol {
 
-    //MARK: Properties
-    @IBOutlet weak var image: UIImageView!{
-        didSet{
-            image.clipsToBounds = true
-            image.layer.masksToBounds = true
-            image.layer.cornerRadius = image.frame.height/2.0
-        }
-    }
+    @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var lbTitle: UILabel!
     @IBOutlet weak var txtDescription: UITextView!{
         didSet{
             txtDescription.isEditable = false
         }
     }
-    
+    //MARK: -Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-       
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    override func viewDidLayoutSubviews() {
+        //Configure image
+        image.clipsToBounds = true
+        image.layer.masksToBounds = true
+        image.layer.cornerRadius = image.frame.height/2.0
     }
-    
+    //MARK: Configuration
     //Config page content
     func config(contentModel: PageContentModel?){
         awakeFromNib()

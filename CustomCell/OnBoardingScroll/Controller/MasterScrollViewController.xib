@@ -56,8 +56,8 @@
                 <constraint firstItem="bPy-5p-SYP" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="JMz-qF-6JQ"/>
                 <constraint firstItem="pqO-hU-B40" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="centerY" constant="150" id="MH2-Hd-Oae"/>
                 <constraint firstItem="pqO-hU-B40" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="S9I-dc-q2m"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="yxH-c5-FUI" secondAttribute="top" constant="64" id="SzW-Pa-0SQ"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="yxH-c5-FUI" secondAttribute="trailing" constant="34" id="Zqc-5D-UOO"/>
+                <constraint firstItem="yxH-c5-FUI" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" constant="-20" id="SzW-Pa-0SQ"/>
+                <constraint firstItem="yxH-c5-FUI" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" constant="-34" id="Zqc-5D-UOO"/>
                 <constraint firstItem="bPy-5p-SYP" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="sab-9C-GGl"/>
                 <constraint firstItem="bPy-5p-SYP" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="ycR-YF-aPc"/>
             </constraints>
