@@ -70,6 +70,11 @@
 		F3A996EA20DB80DA00B2E6E9 /* AddNofViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A996E920DB80DA00B2E6E9 /* AddNofViewController.swift */; };
 		F3A996ED20DB8CE700B2E6E9 /* RadioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A996EC20DB8CE700B2E6E9 /* RadioPlayer.swift */; };
 		F3A996EF20DB9B5A00B2E6E9 /* RadioPlayingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A996EE20DB9B5A00B2E6E9 /* RadioPlayingViewController.swift */; };
+		F3A996FC20DCA46800B2E6E9 /* MediaPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A996FB20DCA46800B2E6E9 /* MediaPlayer.swift */; };
+		F3D9389220DCD371003D52E2 /* UserLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D9389120DCD371003D52E2 /* UserLoader.swift */; };
+		F3D9389520DD0773003D52E2 /* ProfileInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D9389420DD0773003D52E2 /* ProfileInteractor.swift */; };
+		F3D9389820DD0A8B003D52E2 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D9389620DD0A8B003D52E2 /* ProfileViewController.swift */; };
+		F3D9389920DD0A8B003D52E2 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3D9389720DD0A8B003D52E2 /* ProfileViewController.xib */; };
 		F3EAFF7E20D2774100F7AE86 /* AudioPlayerWithNof.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3EAFF7D20D2774100F7AE86 /* AudioPlayerWithNof.swift */; };
 /* End PBXBuildFile section */
 
@@ -160,6 +165,11 @@
 		F3A996E920DB80DA00B2E6E9 /* AddNofViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNofViewController.swift; sourceTree = "<group>"; };
 		F3A996EC20DB8CE700B2E6E9 /* RadioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioPlayer.swift; sourceTree = "<group>"; };
 		F3A996EE20DB9B5A00B2E6E9 /* RadioPlayingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioPlayingViewController.swift; sourceTree = "<group>"; };
+		F3A996FB20DCA46800B2E6E9 /* MediaPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaPlayer.swift; sourceTree = "<group>"; };
+		F3D9389120DCD371003D52E2 /* UserLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLoader.swift; sourceTree = "<group>"; };
+		F3D9389420DD0773003D52E2 /* ProfileInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInteractor.swift; sourceTree = "<group>"; };
+		F3D9389620DD0A8B003D52E2 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		F3D9389720DD0A8B003D52E2 /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
 		F3EAFF7D20D2774100F7AE86 /* AudioPlayerWithNof.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayerWithNof.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -279,6 +289,9 @@
 		0F563AFB207DB168005B365E /* CustomCell */ = {
 			isa = PBXGroup;
 			children = (
+				F3D9389320DD0755003D52E2 /* ProfileLogicExample */,
+				F3D9389020DCD34A003D52E2 /* TokenBaseAPI */,
+				F3A996FA20DCA28100B2E6E9 /* MediaPlayer */,
 				F3A996EB20DB8CB600B2E6E9 /* RadioPlayer */,
 				F3EAFC4520CA305B00F7AE86 /* BroadcastDelegate */,
 				0F2DC34520B7FE58002740EF /* OnBoardingScroll */,
@@ -439,6 +452,32 @@
 			path = RadioPlayer;
 			sourceTree = "<group>";
 		};
+		F3A996FA20DCA28100B2E6E9 /* MediaPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				F3A996FB20DCA46800B2E6E9 /* MediaPlayer.swift */,
+			);
+			path = MediaPlayer;
+			sourceTree = "<group>";
+		};
+		F3D9389020DCD34A003D52E2 /* TokenBaseAPI */ = {
+			isa = PBXGroup;
+			children = (
+				F3D9389120DCD371003D52E2 /* UserLoader.swift */,
+			);
+			path = TokenBaseAPI;
+			sourceTree = "<group>";
+		};
+		F3D9389320DD0755003D52E2 /* ProfileLogicExample */ = {
+			isa = PBXGroup;
+			children = (
+				F3D9389420DD0773003D52E2 /* ProfileInteractor.swift */,
+				F3D9389620DD0A8B003D52E2 /* ProfileViewController.swift */,
+				F3D9389720DD0A8B003D52E2 /* ProfileViewController.xib */,
+			);
+			path = ProfileLogicExample;
+			sourceTree = "<group>";
+		};
 		F3EAFC4520CA305B00F7AE86 /* BroadcastDelegate */ = {
 			isa = PBXGroup;
 			children = (
@@ -555,6 +594,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3D9389920DD0A8B003D52E2 /* ProfileViewController.xib in Resources */,
 				0F563B3B207DE15F005B365E /* DetailTableViewController.xib in Resources */,
 				0F6419F120B3B9B200AD10EF /* GetStartedViewController.xib in Resources */,
 				0F563B07207DB168005B365E /* LaunchScreen.storyboard in Resources */,
@@ -628,18 +668,22 @@
 				0F563B48207DE7C7005B365E /* MealDataModel.swift in Sources */,
 				0F641A0920B412A000AD10EF /* PageContentModel.swift in Sources */,
 				0F96D35420BD57E1004F5FDF /* MasterScrollInteractor.swift in Sources */,
+				F3D9389820DD0A8B003D52E2 /* ProfileViewController.swift in Sources */,
 				0F563AFD207DB168005B365E /* AppDelegate.swift in Sources */,
 				1FF839AE20AC1B5100127D68 /* Authenticator.swift in Sources */,
 				1FF839AA20AC1AB100127D68 /* PostLoginFailurePlugin.swift in Sources */,
 				0F7D518720BCED54007326CF /* MasterScrollViewController.swift in Sources */,
 				1FF839AC20AC1ADE00127D68 /* PostLoginSuccessPlugin.swift in Sources */,
+				F3D9389220DCD371003D52E2 /* UserLoader.swift in Sources */,
 				0F96D34B20BD4CBD004F5FDF /* TranslateAnimation.swift in Sources */,
 				F3A996EF20DB9B5A00B2E6E9 /* RadioPlayingViewController.swift in Sources */,
 				0F5CF3CA2085910D00CD003F /* ListViewInteractor.swift in Sources */,
 				0F563B2C207DB33E005B365E /* MealCell.swift in Sources */,
+				F3A996FC20DCA46800B2E6E9 /* MediaPlayer.swift in Sources */,
 				0F2DC34E20B7FEC6002740EF /* PageViewController.swift in Sources */,
 				1FF839A820AC198500127D68 /* LoginContainer.swift in Sources */,
 				0F563B32207DB3E8005B365E /* MealTableViewController.swift in Sources */,
+				F3D9389520DD0773003D52E2 /* ProfileInteractor.swift in Sources */,
 				0F96D35620BD582C004F5FDF /* MasterScrollRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
