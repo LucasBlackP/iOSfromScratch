@@ -87,6 +87,11 @@
 		1FF839B620AC461400127D68 /* FirstLaunch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF839B520AC461400127D68 /* FirstLaunch.swift */; };
 		1FF839B920AC49EE00127D68 /* UserCacher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF839B820AC49EE00127D68 /* UserCacher.swift */; };
 		41BF3EC5EB87F19CDAC4D76D /* Pods_CustomCell.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0081908C7917ED1F80EAC1AA /* Pods_CustomCell.framework */; };
+		F3D9389D20E0CEBD003D52E2 /* ErrorOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D9389C20E0CEBD003D52E2 /* ErrorOptions.swift */; };
+		F3D9389F20E0D2A8003D52E2 /* ErrorPopoverRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D9389E20E0D2A8003D52E2 /* ErrorPopoverRenderer.swift */; };
+		F3D938A220E0DEED003D52E2 /* PartialUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D938A120E0DEED003D52E2 /* PartialUser.swift */; };
+		F3D938A420E0F47A003D52E2 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D938A320E0F47A003D52E2 /* UserViewModel.swift */; };
+		F3D938A620E0F755003D52E2 /* ProfileUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D938A520E0F755003D52E2 /* ProfileUser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -195,6 +200,11 @@
 		1FF839B520AC461400127D68 /* FirstLaunch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstLaunch.swift; sourceTree = "<group>"; };
 		1FF839B820AC49EE00127D68 /* UserCacher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCacher.swift; sourceTree = "<group>"; };
 		A318947F4429416426D8D0BE /* Pods-CustomCell.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomCell.release.xcconfig"; path = "Pods/Target Support Files/Pods-CustomCell/Pods-CustomCell.release.xcconfig"; sourceTree = "<group>"; };
+		F3D9389C20E0CEBD003D52E2 /* ErrorOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorOptions.swift; sourceTree = "<group>"; };
+		F3D9389E20E0D2A8003D52E2 /* ErrorPopoverRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorPopoverRenderer.swift; sourceTree = "<group>"; };
+		F3D938A120E0DEED003D52E2 /* PartialUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartialUser.swift; sourceTree = "<group>"; };
+		F3D938A320E0F47A003D52E2 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		F3D938A520E0F755003D52E2 /* ProfileUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileUser.swift; sourceTree = "<group>"; };
 		FAACCC9DA0F50E986E806AC1 /* Pods-CustomCell.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomCell.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CustomCell/Pods-CustomCell.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -255,8 +265,6 @@
 		0F1DE10620D2281C007BFCE9 /* TabbarController */ = {
 			isa = PBXGroup;
 			children = (
-				0F1DE10720D2287A007BFCE9 /* ProfileViewController.swift */,
-				0F1DE10820D2287A007BFCE9 /* ProfileViewController.xib */,
 				0F1DE10B20D22896007BFCE9 /* TopChartsViewController.swift */,
 				0F1DE10C20D22896007BFCE9 /* TopChartsViewController.xib */,
 				0F1DE10F20D228F8007BFCE9 /* SearchViewController.swift */,
@@ -356,6 +364,9 @@
 		0F563AFB207DB168005B365E /* CustomCell */ = {
 			isa = PBXGroup;
 			children = (
+				F3D938A020E0DED0003D52E2 /* PartialSignUp */,
+				F3D9389B20E0C336003D52E2 /* CustomPopup */,
+				F3D9389A20DFDE14003D52E2 /* ProfileViewController */,
 				0F1D5AD420DB892C00A04FD5 /* CustomCell.entitlements */,
 				0F1D5ADD20DBB07D00A04FD5 /* SignupController */,
 				0F5F02B020DB454B009EAA6F /* LoginController */,
@@ -525,6 +536,34 @@
 				1FF839B820AC49EE00127D68 /* UserCacher.swift */,
 			);
 			path = Simple_DI;
+			sourceTree = "<group>";
+		};
+		F3D9389A20DFDE14003D52E2 /* ProfileViewController */ = {
+			isa = PBXGroup;
+			children = (
+				0F1DE10720D2287A007BFCE9 /* ProfileViewController.swift */,
+				0F1DE10820D2287A007BFCE9 /* ProfileViewController.xib */,
+				F3D938A320E0F47A003D52E2 /* UserViewModel.swift */,
+				F3D938A520E0F755003D52E2 /* ProfileUser.swift */,
+			);
+			path = ProfileViewController;
+			sourceTree = "<group>";
+		};
+		F3D9389B20E0C336003D52E2 /* CustomPopup */ = {
+			isa = PBXGroup;
+			children = (
+				F3D9389C20E0CEBD003D52E2 /* ErrorOptions.swift */,
+				F3D9389E20E0D2A8003D52E2 /* ErrorPopoverRenderer.swift */,
+			);
+			path = CustomPopup;
+			sourceTree = "<group>";
+		};
+		F3D938A020E0DED0003D52E2 /* PartialSignUp */ = {
+			isa = PBXGroup;
+			children = (
+				F3D938A120E0DEED003D52E2 /* PartialUser.swift */,
+			);
+			path = PartialSignUp;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -736,6 +775,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3D938A220E0DEED003D52E2 /* PartialUser.swift in Sources */,
 				0F70093120D8AD6300CF82A4 /* DetectFirstLaunch.swift in Sources */,
 				1FF839B120AC365100127D68 /* UserProfilePostLoginPluginImpl.swift in Sources */,
 				0F563B3A207DE15F005B365E /* DetailTableViewController.swift in Sources */,
@@ -748,7 +788,10 @@
 				0F1D5AE120DBB27E00A04FD5 /* SignUpRouter.swift in Sources */,
 				0F563B42207DE214005B365E /* IngredientCell.swift in Sources */,
 				0F1DE10920D2287A007BFCE9 /* ProfileViewController.swift in Sources */,
+				F3D938A420E0F47A003D52E2 /* UserViewModel.swift in Sources */,
 				0F29AF812080A64E00F41214 /* EditPhotoController.swift in Sources */,
+				F3D9389D20E0CEBD003D52E2 /* ErrorOptions.swift in Sources */,
+				F3D938A620E0F755003D52E2 /* ProfileUser.swift in Sources */,
 				1FF839B620AC461400127D68 /* FirstLaunch.swift in Sources */,
 				0F28CC22207F39E50078943C /* ViewController.swift in Sources */,
 				1FF839B920AC49EE00127D68 /* UserCacher.swift in Sources */,
@@ -756,6 +799,7 @@
 				0F96D35820BD5855004F5FDF /* MasterScrollPresenter.swift in Sources */,
 				0F1D5ADF20DBB0F700A04FD5 /* SignUpInteractor.swift in Sources */,
 				0F1DE10D20D22896007BFCE9 /* TopChartsViewController.swift in Sources */,
+				F3D9389F20E0D2A8003D52E2 /* ErrorPopoverRenderer.swift in Sources */,
 				0F6419F020B3B9B200AD10EF /* GetStartedViewController.swift in Sources */,
 				0F28CC1F207EF94D0078943C /* TableDataModel.swift in Sources */,
 				0F563B52207E2021005B365E /* CellConfigure.swift in Sources */,
