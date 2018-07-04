@@ -8,12 +8,22 @@
 
 import UIKit
 
-class LoginRouter{
+protocol LoginRouterProtocol{
+    static func configure()->UIViewController
+    static func loadView()->UIViewController
+    func loadSignUpScreen(from: LoginViewProtocol?)
+    func loadMenuScreen(from: LoginViewProtocol?)
+}
+
+class LoginRouter: LoginRouterProtocol{
     static func configure()->UIViewController{
         let loginController = LoginViewController()
         let loginInteractor = LoginInteractor()
+        let router = LoginRouter()
+        loginController.user = UserAuthenticate()
         loginController.interactor = loginInteractor
         loginInteractor.loginController = loginController
+        loginInteractor.router = router
         return loginController
     }
     static func loadView()->UIViewController{
@@ -29,5 +39,23 @@ class LoginRouter{
         userController.tabBarItem = UITabBarItem(title: "Profile", image: UIImage(named: "profile")!, tag: 4)
         tabbarController.viewControllers = [navTableView,chartController,tagController,userController]
         return tabbarController
+    }
+    func loadSignUpScreen(from view: LoginViewProtocol?) {
+        guard let view = view as? UIViewController else{
+            return
+        }
+        guard let navController = view.navigationController else{
+            let navController = UINavigationController(rootViewController: view)
+            navController.pushViewController(SignUpRouter.configure(), animated: true)
+            view.view.window?.rootViewController = navController
+            return
+        }
+        navController.pushViewController(SignUpRouter.configure(), animated: true)
+    }
+    func loadMenuScreen(from view: LoginViewProtocol?) {
+        guard let view = view as? UIViewController else{
+            return
+        }
+        view.view.window?.rootViewController = LoginRouter.loadView()
     }
 }

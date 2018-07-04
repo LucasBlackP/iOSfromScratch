@@ -11,29 +11,43 @@ import UIKit
 import Firebase
 protocol LoginInteractorProtocol: class{
     var loginController: LoginViewProtocol?{get set}
+    var router: LoginRouterProtocol?{get set}
     func login(username: String, password: String)
     func signUp()
+    func onLoginSuccess()
+    func passwordPattern()->String
+    func usernamePattern()->String
 }
 
 class LoginInteractor: LoginInteractorProtocol{
+    
     weak var loginController: LoginViewProtocol?
+    var router: LoginRouterProtocol?
     
     func login(username: String, password: String) {
         Auth.auth().signIn(withEmail: username, password: password){
             user, error in
-            //Failed
             if let error = error{
-                self.loginController?.onLoginError(message: error.localizedDescription)
+                self.loginController?.user?.state = .error(message: error.localizedDescription)
                 return
             }
             //Success
-            self.loginController?.onLoginSuccess(viewController: self.onLoginSuccess())
+            self.loginController?.user?.state = .success
         }
     }
+    
     func signUp(){
-        self.loginController?.pushView(viewController: SignUpRouter.configure())
+        self.router?.loadSignUpScreen(from: self.loginController)
     }
-    func onLoginSuccess()->UIViewController{
-        return LoginRouter.loadView()
+    
+    func onLoginSuccess(){
+        router?.loadMenuScreen(from: self.loginController)
+    }
+    
+    func passwordPattern() -> String {
+        return "[a-zA-Z0-9][a-zA-Z0-9][a-zA-Z0-9][a-zA-Z0-9][a-zA-Z0-9][a-zA-Z0-9]"
+    }
+    func usernamePattern() -> String {
+        return "[a-zA-Z0-9]+\\@[a-zA-Z0-9]+\\.[a-zA-Z0-9]+"
     }
 }

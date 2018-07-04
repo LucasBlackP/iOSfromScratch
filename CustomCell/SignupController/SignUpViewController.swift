@@ -10,57 +10,109 @@ import UIKit
 import Firebase
 
 protocol SignUpViewProtocol: class{
+    var userAuthentication: UserAuthenticateProtocol?{get set}
     var interactor: SignUpInteractorProtocol?{get set}
-    func onLoginError(message: String)
-    func onSignUpSuccess()
 }
 
-class SignUpViewController: UIViewController {
+class SignUpViewController: BaseController, SignUpViewProtocol {
     var interactor: SignUpInteractorProtocol?
-    var indicator: UIActivityIndicatorView!
-    @IBOutlet weak var txtEmail: UITextField!
-    @IBOutlet weak var txtPassword: UITextField!{
+    var userAuthentication: UserAuthenticateProtocol?
+    @IBOutlet weak var txtEmail: CustomTextField!{
+        didSet{
+            txtEmail.formatPattern = interactor?.usernamePattern() ?? ""
+            txtEmail.leftIcon = UIImage(named: "email")
+        }
+    }
+    @IBOutlet weak var txtPassword: CustomTextField!{
         didSet{
             txtPassword.isSecureTextEntry = true
+            txtPassword.formatPattern = interactor?.passwordPattern() ?? ""
+            txtPassword.leftIcon = UIImage(named: "password")
         }
     }
-    @IBOutlet weak var txtConfirmPassword: UITextField!{
+    @IBOutlet weak var txtConfirmPassword: CustomTextField!{
         didSet{
             txtConfirmPassword.isSecureTextEntry = true
+            txtConfirmPassword.formatPattern = interactor?.passwordPattern() ?? ""
+            txtConfirmPassword.leftIcon = UIImage(named: "password")
         }
     }
-    @IBOutlet weak var btnSignUp: UIButton!{
+    @IBOutlet weak var btnSignUp: RadiusButton!
+    @IBOutlet weak var txtErrorMessage: UILabel!{
         didSet{
-            btnSignUp.clipsToBounds = true
-            btnSignUp.layer.masksToBounds = true
-            btnSignUp.layer.cornerRadius = btnSignUp.frame.height/4
+            txtErrorMessage.textColor = .red
         }
     }
+    
+    //MARK: Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         self.title = "Sign Up"
-    }
-    override func viewDidLayoutSubviews() {
         configureView()
     }
+
+    //MARK: Configuration
+    func configureView(){
+        txtEmail.customDelegate = self
+        txtPassword.customDelegate = self
+        txtConfirmPassword.customDelegate = self
+        userAuthentication?.delegate = self
+    }
+    func stopIndicator(){
+        btnSignUp.removeIndicator()
+        btnSignUp.setTitle("Sign up", for: .normal)
+    }
+    //MARK: IBActions
     @IBAction func signUp(_ sender: UIButton) {
-        indicator.startAnimating()
+        btnSignUp.showIndicator()
+        btnSignUp.setTitle("", for: .normal)
         interactor?.signUp(username: txtEmail.text!, password: txtPassword.text!, confirmPassword: txtConfirmPassword.text!)
     }
-    func configureView(){
-        indicator = HUB.createIndicator(for: btnSignUp)
-        self.view.addSubview(indicator)
-    }
+
    
 }
-extension SignUpViewController: SignUpViewProtocol{
-    func onLoginError(message: String) {
-        indicator.stopAnimating()
-        print(message)
+
+extension SignUpViewController: CustomTextFieldDelegate{
+    
+    //Handle event user press return after edited textfield
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
     }
-    func onSignUpSuccess() {
-        indicator.stopAnimating()
-        navigationController?.popToRootViewController(animated: true)
+    
+    //Handle event user begin editting textfield
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        txtErrorMessage.text = ""
+    }
+    
+    //Handle event textfield changed its text
+    func onTextFieldDidChangedText(_ textField: CustomTextField) {
+        switch(txtEmail.verifyState,txtPassword.verifyState,txtConfirmPassword.verifyState){
+        case (CustomTextField.VerifyState.hasText,CustomTextField.VerifyState.hasText,CustomTextField.VerifyState.hasText):
+            btnSignUp.isEnabled = true
+            btnSignUp.backgroundColor = RadiusButton.defaultColor
+        default:
+            break
+        }
+    }
+    
+    //Handle event textfield empty
+    func onTextFieldEmpty(_ textField: CustomTextField) {
+        btnSignUp.isEnabled = false
+        btnSignUp.backgroundColor = RadiusButton.disableColor
+    }
+}
+
+extension SignUpViewController: UserAuthenticateDelegate{
+    func onAuthenticateSuccess() {
+        stopIndicator()
+        showPopup(config: PopupConfiguration(title: "Sign in successfully", message: "Let's login"), handler: {
+            self.interactor?.onSignUpSuccess()
+        })
+    }
+    func onAuthenticateError(message: String) {
+        stopIndicator()
+        txtErrorMessage.text = message
     }
 }

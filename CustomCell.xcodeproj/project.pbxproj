@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F1BF16E20E1DD6900DFB789 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1BF16D20E1DD6900DFB789 /* CustomTextField.swift */; };
 		0F1D5AD720DB9B7900A04FD5 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1D5AD520DB9B7900A04FD5 /* SignUpViewController.swift */; };
 		0F1D5AD820DB9B7900A04FD5 /* SignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F1D5AD620DB9B7900A04FD5 /* SignUpViewController.xib */; };
-		0F1D5ADA20DBA31400A04FD5 /* HUB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1D5AD920DBA31400A04FD5 /* HUB.swift */; };
+		0F1D5ADA20DBA31400A04FD5 /* Indicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1D5AD920DBA31400A04FD5 /* Indicator.swift */; };
 		0F1D5ADC20DBAE4A00A04FD5 /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1D5ADB20DBAE4A00A04FD5 /* LoginInteractor.swift */; };
 		0F1D5ADF20DBB0F700A04FD5 /* SignUpInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1D5ADE20DBB0F700A04FD5 /* SignUpInteractor.swift */; };
 		0F1D5AE120DBB27E00A04FD5 /* SignUpRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1D5AE020DBB27E00A04FD5 /* SignUpRouter.swift */; };
@@ -78,6 +79,10 @@
 		0F96D35420BD57E1004F5FDF /* MasterScrollInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F96D35320BD57E1004F5FDF /* MasterScrollInteractor.swift */; };
 		0F96D35620BD582C004F5FDF /* MasterScrollRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F96D35520BD582C004F5FDF /* MasterScrollRouter.swift */; };
 		0F96D35820BD5855004F5FDF /* MasterScrollPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F96D35720BD5855004F5FDF /* MasterScrollPresenter.swift */; };
+		0FB2CC8A20E0866000AA6C4A /* UserAuthenticate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB2CC8920E0866000AA6C4A /* UserAuthenticate.swift */; };
+		0FB2CC8D20E0FA3D00AA6C4A /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB2CC8C20E0FA3D00AA6C4A /* CustomButton.swift */; };
+		0FB2CC8F20E0FBE000AA6C4A /* Popup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB2CC8E20E0FBE000AA6C4A /* Popup.swift */; };
+		0FB2CC9120E0FC0700AA6C4A /* CustomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB2CC9020E0FC0700AA6C4A /* CustomViewController.swift */; };
 		1FF839A820AC198500127D68 /* LoginContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF839A720AC198500127D68 /* LoginContainer.swift */; };
 		1FF839AA20AC1AB100127D68 /* PostLoginFailurePlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF839A920AC1AB100127D68 /* PostLoginFailurePlugin.swift */; };
 		1FF839AC20AC1ADE00127D68 /* PostLoginSuccessPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF839AB20AC1ADE00127D68 /* PostLoginSuccessPlugin.swift */; };
@@ -108,10 +113,11 @@
 
 /* Begin PBXFileReference section */
 		0081908C7917ED1F80EAC1AA /* Pods_CustomCell.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CustomCell.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0F1BF16D20E1DD6900DFB789 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		0F1D5AD420DB892C00A04FD5 /* CustomCell.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CustomCell.entitlements; sourceTree = "<group>"; };
 		0F1D5AD520DB9B7900A04FD5 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		0F1D5AD620DB9B7900A04FD5 /* SignUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignUpViewController.xib; sourceTree = "<group>"; };
-		0F1D5AD920DBA31400A04FD5 /* HUB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUB.swift; sourceTree = "<group>"; };
+		0F1D5AD920DBA31400A04FD5 /* Indicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Indicator.swift; sourceTree = "<group>"; };
 		0F1D5ADB20DBAE4A00A04FD5 /* LoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
 		0F1D5ADE20DBB0F700A04FD5 /* SignUpInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpInteractor.swift; sourceTree = "<group>"; };
 		0F1D5AE020DBB27E00A04FD5 /* SignUpRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpRouter.swift; sourceTree = "<group>"; };
@@ -186,6 +192,10 @@
 		0F96D35320BD57E1004F5FDF /* MasterScrollInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterScrollInteractor.swift; sourceTree = "<group>"; };
 		0F96D35520BD582C004F5FDF /* MasterScrollRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterScrollRouter.swift; sourceTree = "<group>"; };
 		0F96D35720BD5855004F5FDF /* MasterScrollPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterScrollPresenter.swift; sourceTree = "<group>"; };
+		0FB2CC8920E0866000AA6C4A /* UserAuthenticate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAuthenticate.swift; sourceTree = "<group>"; };
+		0FB2CC8C20E0FA3D00AA6C4A /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		0FB2CC8E20E0FBE000AA6C4A /* Popup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Popup.swift; sourceTree = "<group>"; };
+		0FB2CC9020E0FC0700AA6C4A /* CustomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewController.swift; sourceTree = "<group>"; };
 		1FF839A720AC198500127D68 /* LoginContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginContainer.swift; sourceTree = "<group>"; };
 		1FF839A920AC1AB100127D68 /* PostLoginFailurePlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostLoginFailurePlugin.swift; sourceTree = "<group>"; };
 		1FF839AB20AC1ADE00127D68 /* PostLoginSuccessPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostLoginSuccessPlugin.swift; sourceTree = "<group>"; };
@@ -334,6 +344,8 @@
 		0F563AF0207DB168005B365E = {
 			isa = PBXGroup;
 			children = (
+				0F1D5AD420DB892C00A04FD5 /* CustomCell.entitlements */,
+				0FB2CC8B20E0FA2000AA6C4A /* CustomView */,
 				0F563AFB207DB168005B365E /* CustomCell */,
 				0F563B10207DB168005B365E /* CustomCellTests */,
 				0F563B1B207DB168005B365E /* CustomCellUITests */,
@@ -356,7 +368,6 @@
 		0F563AFB207DB168005B365E /* CustomCell */ = {
 			isa = PBXGroup;
 			children = (
-				0F1D5AD420DB892C00A04FD5 /* CustomCell.entitlements */,
 				0F1D5ADD20DBB07D00A04FD5 /* SignupController */,
 				0F5F02B020DB454B009EAA6F /* LoginController */,
 				0F4ED39B20BE59B000E49F2B /* CustomScrollCell */,
@@ -469,7 +480,7 @@
 				0F96D34E20BD5605004F5FDF /* LoginViewController.xib */,
 				0F1D5ADB20DBAE4A00A04FD5 /* LoginInteractor.swift */,
 				0F1D5AE220DBB2FE00A04FD5 /* LoginRouter.swift */,
-				0F1D5AD920DBA31400A04FD5 /* HUB.swift */,
+				0FB2CC8920E0866000AA6C4A /* UserAuthenticate.swift */,
 			);
 			path = LoginController;
 			sourceTree = "<group>";
@@ -488,6 +499,18 @@
 				0F96D34A20BD4CBD004F5FDF /* TranslateAnimation.swift */,
 			);
 			path = Animation;
+			sourceTree = "<group>";
+		};
+		0FB2CC8B20E0FA2000AA6C4A /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				0FB2CC8C20E0FA3D00AA6C4A /* CustomButton.swift */,
+				0F1D5AD920DBA31400A04FD5 /* Indicator.swift */,
+				0FB2CC8E20E0FBE000AA6C4A /* Popup.swift */,
+				0FB2CC9020E0FC0700AA6C4A /* CustomViewController.swift */,
+				0F1BF16D20E1DD6900DFB789 /* CustomTextField.swift */,
+			);
+			path = CustomView;
 			sourceTree = "<group>";
 		};
 		1FF839A620AC196300127D68 /* Login_Plugin */ = {
@@ -742,13 +765,16 @@
 				0F1D5AE320DBB2FE00A04FD5 /* LoginRouter.swift in Sources */,
 				0F2DC34820B7FE99002740EF /* OnBoardingScrollViewController.swift in Sources */,
 				0F2DC35720B81843002740EF /* OnBoardingScrollInteractor.swift in Sources */,
+				0F1BF16E20E1DD6900DFB789 /* CustomTextField.swift in Sources */,
 				0F96D34F20BD5605004F5FDF /* LoginViewController.swift in Sources */,
 				0F563B4B207DF1D1005B365E /* DetailCell.swift in Sources */,
 				1FF839B320AC399A00127D68 /* UserFeedPostLoginPluginImpl.swift in Sources */,
 				0F1D5AE120DBB27E00A04FD5 /* SignUpRouter.swift in Sources */,
 				0F563B42207DE214005B365E /* IngredientCell.swift in Sources */,
 				0F1DE10920D2287A007BFCE9 /* ProfileViewController.swift in Sources */,
+				0FB2CC9120E0FC0700AA6C4A /* CustomViewController.swift in Sources */,
 				0F29AF812080A64E00F41214 /* EditPhotoController.swift in Sources */,
+				0FB2CC8A20E0866000AA6C4A /* UserAuthenticate.swift in Sources */,
 				1FF839B620AC461400127D68 /* FirstLaunch.swift in Sources */,
 				0F28CC22207F39E50078943C /* ViewController.swift in Sources */,
 				1FF839B920AC49EE00127D68 /* UserCacher.swift in Sources */,
@@ -761,9 +787,10 @@
 				0F563B52207E2021005B365E /* CellConfigure.swift in Sources */,
 				0F2DC35520B81827002740EF /* OnBoardingScrollPresenter.swift in Sources */,
 				0F29AF892080B82E00F41214 /* DescriptionDelegateModel.swift in Sources */,
-				0F1D5ADA20DBA31400A04FD5 /* HUB.swift in Sources */,
+				0F1D5ADA20DBA31400A04FD5 /* Indicator.swift in Sources */,
 				0F29AF852080A6EA00F41214 /* EditDescriptionController.swift in Sources */,
 				0F4ED39E20BE59DE00E49F2B /* ScrollCell.swift in Sources */,
+				0FB2CC8D20E0FA3D00AA6C4A /* CustomButton.swift in Sources */,
 				0F563B35207DB97D005B365E /* MealModel.swift in Sources */,
 				0F563B4F207DF1ED005B365E /* AuthorCell.swift in Sources */,
 				0F5CF3D02085ACC700CD003F /* TableDelegateModel.swift in Sources */,
@@ -776,6 +803,7 @@
 				0F641A0920B412A000AD10EF /* PageContentModel.swift in Sources */,
 				0F96D35420BD57E1004F5FDF /* MasterScrollInteractor.swift in Sources */,
 				0F563AFD207DB168005B365E /* AppDelegate.swift in Sources */,
+				0FB2CC8F20E0FBE000AA6C4A /* Popup.swift in Sources */,
 				1FF839AE20AC1B5100127D68 /* Authenticator.swift in Sources */,
 				1FF839AA20AC1AB100127D68 /* PostLoginFailurePlugin.swift in Sources */,
 				0F7D518720BCED54007326CF /* MasterScrollViewController.swift in Sources */,
@@ -960,12 +988,13 @@
 			baseConfigurationReference = FAACCC9DA0F50E986E806AC1 /* Pods-CustomCell.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = CustomCell/CustomCell.entitlements;
+				CODE_SIGN_ENTITLEMENTS = CustomCell.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8C3BS9LYL6;
 				INFOPLIST_FILE = CustomCell/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = vng.CustomCell;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "";
@@ -979,12 +1008,13 @@
 			baseConfigurationReference = A318947F4429416426D8D0BE /* Pods-CustomCell.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = CustomCell/CustomCell.entitlements;
+				CODE_SIGN_ENTITLEMENTS = CustomCell.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8C3BS9LYL6;
 				INFOPLIST_FILE = CustomCell/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = vng.CustomCell;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "";

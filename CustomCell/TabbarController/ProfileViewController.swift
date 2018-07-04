@@ -10,6 +10,8 @@ import UIKit
 
 class ProfileViewController: UIViewController {
 
+    @IBOutlet weak var txtUsername: UILabel!
+    @IBOutlet weak var avatar: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,14 +24,10 @@ class ProfileViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    override func viewDidLayoutSubviews() {
+        avatar.clipsToBounds = true
+        avatar.layer.masksToBounds = true
+        avatar.layer.cornerRadius = avatar.frame.height/2.0
     }
-    */
 
 }
